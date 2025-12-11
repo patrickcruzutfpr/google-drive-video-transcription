@@ -13,13 +13,14 @@ Data: 11 de Dezembro de 2025
 import os
 import sys
 import whisper
+import torch
 import subprocess
 from datetime import datetime
 from pathlib import Path
 
 # Configurações
 INPUT_VIDEO = r"data\aula_gestao-da-inovacao-em-ciencia-de-dados_20251122_recording.mp4"
-OUTPUT_FILE = r"data\transcricao_whisper_local.txt"
+OUTPUT_FILE = r"data\transcricao_aula_gestao-da-inovacao-em-ciencia-de-dados_20251122.txt"
 TEMP_AUDIO = r"data\temp_audio_extraction.wav"
 MODEL_NAME = "large-v3"
 
@@ -95,14 +96,24 @@ def main():
     if not extract_audio(INPUT_VIDEO, TEMP_AUDIO):
         sys.exit(1)
     
-    # Passo 2: Carregar modelo
+    # Passo 2: Carregar modelo com GPU se disponível
     print(f"\nCarregando modelo Whisper {MODEL_NAME}...")
     print("(Primeira execução: pode baixar ~3GB de modelo)")
-    model = whisper.load_model(MODEL_NAME)
+    
+    # Detectar dispositivo (GPU/CPU)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    if device == "cuda":
+        print(f"🚀 GPU detectada: {torch.cuda.get_device_name(0)}")
+        print(f"💾 VRAM disponível: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB")
+    else:
+        print("⚠️  GPU não detectada. Usando CPU (mais lento)")
+    
+    model = whisper.load_model(MODEL_NAME, device=device)
     print("Modelo carregado com sucesso!")
     
     # Passo 3: Transcrever
     print("\nIniciando transcrição...")
+    print(f"Dispositivo: {device.upper()}")
     print("Processando áudio otimizado (mais rápido que vídeo direto)...")
     
     try:
@@ -110,7 +121,7 @@ def main():
             TEMP_AUDIO,
             language="pt",
             verbose=True,
-            fp16=False,  # Use False se não tiver GPU CUDA
+            fp16=(device == "cuda"),  # Usar FP16 apenas com GPU
             word_timestamps=False  # Desabilitar para melhor velocidade
         )
         
@@ -131,6 +142,7 @@ TRANSCRIÇÃO DE VÍDEO - GESTÃO DA INOVAÇÃO EM CIÊNCIA DE DADOS
 Arquivo Original: {INPUT_VIDEO}
 Data de Transcrição: {datetime.now().strftime('%d/%m/%Y às %H:%M:%S')}
 Modelo Utilizado: Whisper {MODEL_NAME}
+Dispositivo: {device.upper()} ({torch.cuda.get_device_name(0) if device == "cuda" else "CPU"})
 Método: Extração de áudio otimizada (WAV 16kHz mono)
 Idioma: Português Brasileiro (pt-BR)
 
@@ -140,7 +152,7 @@ Idioma: Português Brasileiro (pt-BR)
     
     print(f"\nSalvando transcrição em: {OUTPUT_FILE}")
     
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+    with open(OUTPUT_FILE, 'w', encoding='utf-8-sig') as f:
         f.write(header)
         f.write(result["text"])
         f.write(f"\n\n{'='*80}\n")
