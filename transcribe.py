@@ -22,12 +22,13 @@ import google.generativeai as genai
 # Carregar variáveis de ambiente
 load_dotenv()
 
-# Configurações
-INPUT_VIDEO = r"data\aula_gestao-da-inovacao-em-ciencia-de-dados_20251122_recording.mp4"
-OUTPUT_FILE = r"results\transcricao_aula_gestao-da-inovacao-em-ciencia-de-dados_20251122.txt"
-TEMP_AUDIO = r"data\temp_audio_gemini.wav"
-MODEL_NAME = "gemini-2.5-flash"
-CHUNK_LENGTH_SECONDS = 10 * 60  # 10 minutos por chunk
+# Importar configurações
+try:
+    import config
+except ImportError:
+    print("ERRO: Arquivo config.py não encontrado!")
+    print("Por favor, certifique-se de que config.py existe no diretório raiz.")
+    sys.exit(1)
 
 
 def configure_gemini():
@@ -62,14 +63,15 @@ def check_video_exists(video_path):
 def extract_audio(video_path, audio_path):
     """Extrai áudio do vídeo em formato WAV."""
     print("\nExtraindo áudio do vídeo...")
+    print(f"Formato: WAV {config.AUDIO_CHANNELS}-channel {config.AUDIO_SAMPLE_RATE}Hz")
     
     try:
         command = [
             'ffmpeg',
             '-i', video_path,
             '-vn',
-            '-ar', '44100',
-            '-ac', '2',
+            '-ar', str(config.AUDIO_SAMPLE_RATE),
+            '-ac', str(config.AUDIO_CHANNELS),
             '-c:a', 'pcm_s16le',
             '-y',
             audio_path
@@ -102,8 +104,9 @@ def get_audio_duration(audio_path):
         return None
 
 
-def split_audio_chunks(audio_path, chunk_length_seconds):
+def split_audio_chunks(audio_path, chunk_length_seconds=None):
     """Divide o áudio em chunks usando ffmpeg."""
+    chunk_length_seconds = chunk_length_seconds or (config.GEMINI_CHUNK_MINUTES * 60)
     print(f"\nDividindo áudio em chunks de {chunk_length_seconds//60} minutos...")
     
     # Obter duração total
@@ -165,7 +168,7 @@ def transcribe_audio_chunk(audio_file, chunk_index, total_chunks):
     """Transcreve um chunk de áudio usando Gemini."""
     print(f"\nTranscrevendo chunk {chunk_index + 1}/{total_chunks}...")
     
-    model = genai.GenerativeModel(model_name=MODEL_NAME)
+    model = genai.GenerativeModel(model_name=config.GEMINI_MODEL)
     
     prompt = f"""Transcreva este áudio em Português Brasileiro.
 
@@ -240,9 +243,9 @@ def save_transcription(transcription, output_path):
 TRANSCRIÇÃO DE VÍDEO - GESTÃO DA INOVAÇÃO EM CIÊNCIA DE DADOS
 {'='*80}
 
-Arquivo Original: {INPUT_VIDEO}
+Arquivo Original: {config.INPUT_VIDEO}
 Data de Transcrição: {datetime.now().strftime('%d/%m/%Y às %H:%M:%S')}
-Modelo Utilizado: {MODEL_NAME}
+Modelo Utilizado: {config.GEMINI_MODEL}
 Idioma: Português Brasileiro (pt-BR)
 
 {'='*80}
@@ -287,22 +290,33 @@ def cleanup_files(file_list):
 def main():
     """Função principal que executa o processo de transcrição com chunking."""
     print("="*80)
-    print("TRANSCRIÇÃO DE VÍDEO COM GOOGLE `GEMINI 2.5 FLASH`".center(80))
+    print(f"TRANSCRIÇÃO DE VÍDEO COM GOOGLE {config.GEMINI_MODEL.upper()}".center(80))
     print("="*80)
+    
+    # Mostrar configurações
+    print(f"\n📋 Configurações:")
+    print(f"   Modelo: {config.GEMINI_MODEL}")
+    print(f"   Chunk: {config.GEMINI_CHUNK_MINUTES} minutos")
+    print(f"   Áudio: {config.AUDIO_SAMPLE_RATE}Hz, {config.AUDIO_CHANNELS} canal(is)")
+    
+    # Definir caminhos
+    temp_audio = r"data\temp_audio_gemini.wav"
+    output_file = os.path.join(config.OUTPUT_DIR, config.OUTPUT_BASENAME + ".txt")
     
     # Passo 1: Configurar API
     configure_gemini()
     
     # Passo 2: Verificar vídeo
-    check_video_exists(INPUT_VIDEO)
+    check_video_exists(config.INPUT_VIDEO)
     
     # Passo 3: Extrair áudio
     os.makedirs("data", exist_ok=True)
-    if not extract_audio(INPUT_VIDEO, TEMP_AUDIO):
+    os.makedirs(config.OUTPUT_DIR, exist_ok=True)
+    if not extract_audio(config.INPUT_VIDEO, temp_audio):
         sys.exit(1)
     
     # Passo 4: Dividir em chunks
-    chunk_files = split_audio_chunks(TEMP_AUDIO, CHUNK_LENGTH_SECONDS)
+    chunk_files = split_audio_chunks(temp_audio)
     print(f"\nTotal de chunks: {len(chunk_files)}")
     
     # Passo 5: Processar cada chunk
@@ -327,16 +341,18 @@ def main():
     # Passo 6: Combinar transcrições
     if not transcriptions:
         print("\nERRO: Nenhuma transcrição foi gerada!")
-        cleanup_files([TEMP_AUDIO] + chunk_files)
+        if config.CLEANUP_TEMP_FILES:
+            cleanup_files([temp_audio] + chunk_files)
         sys.exit(1)
     
     full_transcription = "\n\n".join(transcriptions)
     
     # Passo 7: Salvar resultado
-    save_transcription(full_transcription, OUTPUT_FILE)
+    save_transcription(full_transcription, output_file)
     
     # Passo 8: Limpeza
-    cleanup_files([TEMP_AUDIO] + chunk_files)
+    if config.CLEANUP_TEMP_FILES:
+        cleanup_files([temp_audio] + chunk_files)
     
     # Remover arquivos do Google AI
     for audio_file in uploaded_files:
@@ -348,7 +364,7 @@ def main():
     print("\n" + "="*80)
     print("PROCESSO CONCLUÍDO COM SUCESSO!".center(80))
     print("="*80)
-    print(f"\nArquivo de transcrição: {os.path.abspath(OUTPUT_FILE)}")
+    print(f"\n📁 Arquivo de transcrição: {os.path.abspath(output_file)}")
 
 
 if __name__ == "__main__":
