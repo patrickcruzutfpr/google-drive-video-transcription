@@ -1,0 +1,4 @@
+FROM ./whisper-large-v3.gguf
+
+# Minimal Modelfile: Ollama will load the local GGUF.
+# Additional directives were removed to avoid 'unknown type' errors.
