@@ -13,12 +13,11 @@ import os
 import sys
 import time
 import subprocess
+import math
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
 import google.generativeai as genai
-from pydub import AudioSegment
-from pydub.utils import make_chunks
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -28,7 +27,7 @@ INPUT_VIDEO = r"data\aula_gestao-da-inovacao-em-ciencia-de-dados_20251122_record
 OUTPUT_FILE = r"data\transcricao_aula_gestao-da-inovacao-em-ciencia-de-dados_20251122.txt"
 TEMP_AUDIO = r"data\temp_audio_gemini.wav"
 MODEL_NAME = "gemini-2.5-flash"
-CHUNK_LENGTH_MS = 10 * 60 * 1000  # 10 minutos por chunk
+CHUNK_LENGTH_SECONDS = 10 * 60  # 10 minutos por chunk
 
 
 def configure_gemini():
@@ -86,20 +85,55 @@ def extract_audio(video_path, audio_path):
         return False
 
 
-def split_audio_chunks(audio_path, chunk_length_ms):
-    """Divide o áudio em chunks menores."""
-    print(f"\nDividindo áudio em chunks de {chunk_length_ms//1000//60} minutos...")
+def get_audio_duration(audio_path):
+    """Obtém a duração do áudio em segundos usando ffprobe."""
+    try:
+        command = [
+            'ffprobe',
+            '-v', 'error',
+            '-show_entries', 'format=duration',
+            '-of', 'default=noprint_wrappers=1:nokey=1',
+            audio_path
+        ]
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        return float(result.stdout.strip())
+    except Exception as e:
+        print(f"ERRO ao obter duração: {e}")
+        return None
+
+
+def split_audio_chunks(audio_path, chunk_length_seconds):
+    """Divide o áudio em chunks usando ffmpeg."""
+    print(f"\nDividindo áudio em chunks de {chunk_length_seconds//60} minutos...")
     
-    audio = AudioSegment.from_wav(audio_path)
-    chunks = make_chunks(audio, chunk_length_ms)
+    # Obter duração total
+    duration = get_audio_duration(audio_path)
+    if not duration:
+        return []
     
+    num_chunks = math.ceil(duration / chunk_length_seconds)
     chunk_files = []
-    for i, chunk in enumerate(chunks):
+    
+    for i in range(num_chunks):
+        start_time = i * chunk_length_seconds
         chunk_filename = f"data/temp_chunk_{i}.wav"
-        chunk.export(chunk_filename, format="wav")
-        chunk_files.append(chunk_filename)
-        duration_sec = len(chunk) / 1000
-        print(f"  Chunk {i+1}/{len(chunks)}: {duration_sec:.1f}s")
+        
+        command = [
+            'ffmpeg',
+            '-i', audio_path,
+            '-ss', str(start_time),
+            '-t', str(chunk_length_seconds),
+            '-c', 'copy',
+            '-y',
+            chunk_filename
+        ]
+        
+        try:
+            subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            chunk_files.append(chunk_filename)
+            print(f"  Chunk {i+1}/{num_chunks} criado")
+        except Exception as e:
+            print(f"  ERRO ao criar chunk {i+1}: {e}")
     
     return chunk_files
 
@@ -144,17 +178,48 @@ INSTRUÇÕES:
 Não adicione introdução ou conclusão, apenas a transcrição pura.
 """
     
-    try:
-        response = model.generate_content(
-            [audio_file, prompt],
-            request_options={"timeout": 600}
-        )
-        
-        return response.text
-        
-    except Exception as e:
-        print(f"ERRO durante transcrição: {str(e)}")
-        return None
+    max_retries = 3
+    retry_count = 0
+    
+    while retry_count < max_retries:
+        try:
+            response = model.generate_content(
+                [audio_file, prompt],
+                request_options={"timeout": 600}
+            )
+            
+            return response.text
+            
+        except Exception as e:
+            error_msg = str(e)
+            
+            # Se for erro de quota (429), extrair tempo de retry
+            if "429" in error_msg or "quota" in error_msg.lower():
+                import re
+                retry_match = re.search(r'retry in (\d+(?:\.\d+)?)', error_msg)
+                
+                if retry_match and retry_count < max_retries - 1:
+                    retry_seconds = int(float(retry_match.group(1))) + 5  # +5s de margem
+                    print(f"\n⚠️  Quota excedida. Aguardando {retry_seconds}s antes de tentar novamente...")
+                    time.sleep(retry_seconds)
+                    retry_count += 1
+                    continue
+                else:
+                    print(f"\n❌ ERRO: Quota da API Gemini esgotada!")
+                    print(f"   Limite: 20 requisições/dia (free tier)")
+                    print(f"   Aguarde 24h ou use o script Whisper local:")
+                    print(f"   python transcribe_whisper_optimized.py")
+                    return None
+            else:
+                print(f"ERRO durante transcrição: {error_msg}")
+                if retry_count < max_retries - 1:
+                    retry_count += 1
+                    print(f"Tentando novamente ({retry_count}/{max_retries})...")
+                    time.sleep(5)
+                    continue
+                return None
+    
+    return None
 
 
 def save_transcription(transcription, output_path):
@@ -186,12 +251,12 @@ Idioma: Português Brasileiro (pt-BR)
     
     # Salvar arquivo
     try:
-        with open(output_path, 'w', encoding='utf-8') as f:
+        with open(output_path, 'w', encoding='utf-8-sig') as f:
             f.write(header)
             f.write(transcription)
             f.write(f"\n\n{'='*80}\n")
             f.write("FIM DA TRANSCRIÇÃO\n")
-            f.write(f"{"="*80}\n")
+            f.write(f"{'='*80}\n")
         
         print("Transcrição salva com sucesso!")
         
@@ -237,7 +302,7 @@ def main():
         sys.exit(1)
     
     # Passo 4: Dividir em chunks
-    chunk_files = split_audio_chunks(TEMP_AUDIO, CHUNK_LENGTH_MS)
+    chunk_files = split_audio_chunks(TEMP_AUDIO, CHUNK_LENGTH_SECONDS)
     print(f"\nTotal de chunks: {len(chunk_files)}")
     
     # Passo 5: Processar cada chunk
