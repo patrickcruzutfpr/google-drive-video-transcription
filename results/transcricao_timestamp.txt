@@ -1,0 +1,994 @@
+ídeo encontrado: data\aula_gestao-da-inovacao-em-ciencia-de-dados_20251122_recording.mp4
+Tamanho do arquivo: 186.18 MB
+
+Extraindo áudio do vídeo...
+Formato: WAV mono 16kHz (otimizado para Whisper)
+Áudio extraído com sucesso: 116.21 MB
+
+Carregando modelo Whisper large-v3...
+(Primeira execução: pode baixar ~3GB de modelo)
+🚀 GPU detectada: NVIDIA GeForce RTX 4090
+💾 VRAM disponível: 23.99 GB
+Modelo carregado com sucesso!
+
+Iniciando transcrição...
+Dispositivo: CUDA
+Processando áudio otimizado (mais rápido que vídeo direto)...
+[00:00.000 --> 00:12.980]  Olá pessoal, tudo bem? Bom dia, bom dia, como é que você está? Bom dia, professor. Bom dia, Odino, bom dia, Demais, tudo bem?
+[00:14.820 --> 00:24.300]  Joia, muito bom estar com vocês, eu sou o professor Rafael, eu aguardei um pouquinho a mais, assim, porque teve uma confusão ali, a gente acabou mandando um invite
+[00:24.300 --> 00:36.260]  para o pessoal da turma 2, eu estou sem acesso ao diário da turma de vocês, da turma que era realmente a que a gente tem aqui no cronograma,
+[00:36.460 --> 00:48.180]  que é a turma que iniciou em 2024, sedados 5, né, e a gente estava com alguns alunos que deveriam estar na outra aula,
+[00:48.180 --> 00:54.160]  que é a aula do professor Francisco Carlos, então, atrasei um pouquinho aí o nosso início,
+[00:54.300 --> 01:02.000]  mas sem prejudicar a nossa aula, tá? Primeiramente, agradecer a todo mundo que está online aqui com a gente,
+[01:02.980 --> 01:10.880]  sei que realmente é bastante complicado, às vezes, no feriado prolongado, né, a maioria de vocês
+[01:13.240 --> 01:18.080]  provavelmente está na emenda do feriado aí, então, agradeço bastante a perseverança também.
+[01:19.880 --> 01:24.060]  Pessoal, vou iniciar a nossa aula, então, mostrando um pouquinho,
+[01:24.300 --> 01:34.900]  de como está o nosso Moodle, tá? Vou entrar ali no Moodle com vocês, já solicitar que todos façam acesso, tá?
+[01:47.600 --> 01:54.280]  Estão vendo minha tela já, né? O meu Meet aqui, eu não sei se é o Chrome, eu troquei agora,
+[01:54.300 --> 02:01.400]  para o Chrome, mas eu estava com o Safari e estava tendo um problema de queda toda hora que eu estava transmitindo,
+[01:47.600 --> 01:54.280]  Estão vendo minha tela já, né? O meu Meet aqui, eu não sei se é o Chrome, eu troquei agora,
+[01:54.300 --> 02:01.400]  para o Chrome, mas eu estava com o Safari e estava tendo um problema de queda toda hora que eu estava transmitindo,
+[02:01.480 --> 02:07.960]  às vezes, ele caía. Se isso acontecer, por favor, me avisem, porque eu não vou estar vendo a tela, tá?
+[02:08.780 --> 02:13.940]  E eu vou estar apresentando o tempo todo aqui para vocês, tá? Então, beleza, pessoal.
+[02:15.560 --> 02:21.300]  A gente vai começar, primeiramente, falando um pouquinho de como está organizado o Moodle,
+[02:21.300 --> 02:23.400]  qual é o objetivo da nossa disciplina.
+[02:24.300 --> 02:29.400]  Qual é a nossa intenção com essa disciplina dentro do processo formativo de vocês, tá?
+[02:30.580 --> 02:36.140]  Bom, a disciplina que a gente está ofertando é a disciplina de gestão, inovação e ciência de dados.
+[02:36.960 --> 02:42.900]  É uma disciplina que visa provocá-los a pensar um pouquinho sobre como utilizar
+[02:42.900 --> 02:53.280]  o que vocês estão adquirindo de conhecimento e de informação no processo de criar negócio, inovação,
+[02:53.440 --> 02:54.280]  criar realmente um negócio, né? E, então, a gente vai começar a fazer isso.
+[02:54.440 --> 02:55.580]  A gente vai começar a fazer isso.
+[02:55.580 --> 02:55.620]  Então, a gente vai começar a fazer isso.
+[02:55.620 --> 02:55.700]  A gente vai começar a fazer isso.
+[03:01.620 --> 03:02.080]  Então, a gente vai começar a fazer isso.
+[03:03.480 --> 03:10.680]  Melhorar um processo ou para aprimorar algo que a gente faz na sociedade, no mundo real, tá?
+[03:11.420 --> 03:15.720]  A inovação, ela está totalmente ligada a isso.
+[03:15.720 --> 03:21.340]  Hoje, nós estamos num momento ímpar da nossa vida,
+[03:22.200 --> 03:23.600]  porque a gente está...
+[03:23.600 --> 03:24.260]  porque a gente está em situação de que a gente está em um momento impar da nossa vida,
+[03:24.280 --> 03:34.060]  considerando que nos próximos de 15, 20, 30 anos, nós não sabemos quais profissões vão ser necessárias,
+[03:34.880 --> 03:41.140]  principalmente na área nossa de desenvolvimento, né, a gente está vivendo alguma revolução,
+[03:41.880 --> 03:47.360]  passa também pela questão de arquitetural e do desenvolvimento dos sistemas,
+[03:47.360 --> 03:54.520]  mas a gente não sabe, de fato, quais profissões vão ser necessárias nos próximos 20 anos,
+[03:54.640 --> 03:57.340]  isso é inédito na história da humanidade.
+[04:32.860 --> 04:41.920]  regras de jogo, e big techs e grandes empresas, até com indústria suja, vão precisar se inovar,
+[04:41.920 --> 04:46.140]  senão elas vão estar fora de mercado, e ciência de dados passa por isso também, tá.
+[04:47.360 --> 04:59.020]  A ciência de dados, ela tem um papel essencial nisso, em todos os setores, indústria, indústria limpa, indústria suja,
+[04:59.280 --> 05:07.100]  na parte de recursos, enfim, tudo isso passa pelo conceito que a gente vai enxergar aqui dentro da disciplina, tá.
+[05:07.580 --> 05:15.880]  E, bom, a disciplina tem um que muito interessante, né, a gente tem um termo ali que a gente fala gestão, né, por quê?
+[05:17.360 --> 05:26.440]  Realmente é importante a gente gerir todas essas informações e gerir tudo isso, então ela chama gestão da inovação em ciência de dados,
+[05:26.920 --> 05:32.740]  porque realmente a gente precisa ter um nível de gestão em tudo isso, senão a gente acaba se perdendo, tá.
+[05:33.460 --> 05:38.700]  Então, a gente configurou a disciplina para vocês, eu e o professor André estamos moldando,
+[05:38.700 --> 05:46.920]  a gente vai confessar que é a primeira vez que a gente apresenta ela, então é muito especial a primeira vez que a gente monta,
+[05:47.360 --> 05:56.320]  esses conteúdos, porque a gente vai também numa tentativa, e eu espero que vocês deem feedback ali do que a gente está montando,
+[05:56.420 --> 06:03.840]  do que a gente está elaborando, porque realmente vocês são o norte ali que tateiam, vamos dizer assim,
+[06:03.840 --> 06:07.940]  como que está o nível da disciplina, tá.
+[06:08.900 --> 06:17.160]  Bom, a estratégia de formação que a gente vai utilizar, aqui tem o objetivo,
+[06:17.360 --> 06:26.960]  tem o programa, não vou perder muito tempo falando disso, mas em nível geral, a gente quer explicar para vocês conceitos técnicos sobre inovação,
+[06:28.080 --> 06:39.300]  explicar qual é o papel da inovação na transformação digital, como que vocês podem, durante o decorrer da trajetória de vocês,
+[06:39.300 --> 06:47.340]  identificar oportunidades, analisar mercado, tendências, quais são os métodos, normalmente,
+[06:47.360 --> 06:52.220]  que a gente utiliza para isso, para identificar possibilidades de negócios né.
+[06:53.600 --> 07:00.280]  Falar um pouco de cultura em liderança, liderança não é algo que se compra na farmácia, é algo que a gente pratica.
+[07:00.960 --> 07:06.540]  E muito provavelmente vocês vão ou já estão em cargos associados a liderança,
+[07:06.540 --> 07:14.040]  e isso tem realmente bastante sentido quando a gente fala em inovação, ninguém faz inovação sozinho,
+[07:14.040 --> 07:15.360]  não gente,
+[07:15.360 --> 07:16.560]  já passou o tempo de alguém que consegue e foi engatado, telling,
+[07:16.560 --> 07:16.700]  gente já passou do tempo de alguém que consegue,
+[07:16.700 --> 07:17.160]  também,
+[07:17.360 --> 07:18.900]  fazer algo revolucionário,
+[07:19.400 --> 07:21.240]  trancado num quarto sozinho, sem ter
+[07:21.240 --> 07:23.140]  nenhum parceiro
+[07:23.140 --> 07:25.300]  de projeto,
+[07:25.400 --> 07:27.200]  de propósito, tá? Então, é preciso
+[07:27.200 --> 07:27.860]  liderar.
+[07:28.860 --> 07:31.400]  A importância de líderes na inovação,
+[07:32.100 --> 07:33.200]  a gestão
+[07:33.200 --> 07:35.260]  de mudança em projetos
+[07:35.260 --> 07:37.420]  na área de ciência de dados, são projetos
+[07:37.420 --> 07:39.640]  que, em nível
+[07:39.640 --> 07:41.320]  mais particularizado,
+[07:41.400 --> 07:43.380]  eles vão mudar muito, tenho certeza que vão
+[07:43.380 --> 07:44.780]  mudar muito, tá?
+[07:44.780 --> 07:47.700]  E a gente precisa estar atento a isso, né?
+[07:47.820 --> 07:49.160]  A cocriação com
+[07:49.160 --> 07:51.340]  stakeholders internos e internos,
+[07:51.440 --> 07:53.120]  ecossistemas para startup,
+[07:53.720 --> 07:55.260]  aspectos éticos e
+[07:55.260 --> 07:57.500]  legais em projetos na nossa área,
+[07:57.660 --> 07:59.360]  tá? A nossa estratégia
+[07:59.360 --> 08:00.720]  de formação vai ser,
+[08:01.620 --> 08:03.460]  a gente tem ali, mais ou
+[08:03.460 --> 08:05.320]  menos, uma média
+[08:05.320 --> 08:07.240]  esperada de horas
+[08:07.240 --> 08:09.780]  semanais dedicadas à disciplina,
+[08:10.800 --> 08:11.380]  que é
+[08:11.380 --> 08:12.440]  mais ou menos um,
+[08:12.440 --> 08:14.460]  algo que a gente afere
+[08:14.460 --> 08:15.480]  em torno de três horas.
+[08:16.480 --> 08:18.100]  Então, ao final de cada semana,
+[08:18.600 --> 08:20.120]  tem sempre uma atividade.
+[08:20.960 --> 08:22.280]  Agora, já relatando
+[08:22.280 --> 08:24.200]  para vocês, eu não vou colocar
+[08:24.200 --> 08:26.420]  prazo teto nas atividades, tá?
+[08:27.280 --> 08:28.340]  Eu considero
+[08:28.340 --> 08:30.400]  que vocês já são sêniores aqui nesse nível
+[08:30.400 --> 08:32.520]  do curso. Quando a gente
+[08:32.520 --> 08:34.000]  pega primeiro, segundo,
+[08:34.480 --> 08:36.200]  segundo nível ali, né, o segundo
+[08:36.200 --> 08:38.380]  modo, normalmente a gente tenta
+[08:38.380 --> 08:40.380]  guiar o aluno para ele
+[08:40.380 --> 08:42.200]  semanalmente estar acessando,
+[08:42.200 --> 08:43.620]  e aí a gente coloca prazo.
+[08:44.460 --> 08:46.380]  Atividades aqui eu tô deixando sem prazo,
+[08:47.580 --> 08:48.860]  mas o esperado
+[08:48.860 --> 08:50.340]  é que vocês vão fazendo. Então, eu tenho
+[08:50.340 --> 08:52.800]  tutor e tem a mim que estou acompanhando,
+[08:53.380 --> 08:54.680]  né? O que eu vou pedir pra vocês
+[08:54.680 --> 08:56.720]  é não tentar maratonar a disciplina,
+[08:56.800 --> 08:58.560]  mas fazer no prazo de vocês
+[08:58.560 --> 09:01.140]  e semanalmente
+[09:01.140 --> 09:02.800]  incluir. Por exemplo, a primeira
+[09:02.800 --> 09:04.720]  semana, nós
+[09:04.720 --> 09:06.580]  temos uma tarefinha
+[09:06.580 --> 09:08.860]  que é um post
+[09:08.860 --> 09:10.880]  aqui no nosso
+[09:10.880 --> 09:12.860]  no nosso mural,
+[09:13.040 --> 09:14.440]  né? Que é,
+[09:14.460 --> 09:16.780]  que é responder esse cara aqui, tá?
+[09:17.460 --> 09:18.960]  Depois eu vou mandar de novo
+[09:18.960 --> 09:20.940]  pra vocês, é uma
+[09:20.940 --> 09:23.180]  é uma forma
+[09:23.180 --> 09:24.920]  de provocá-los, né? Sobre um
+[09:24.920 --> 09:27.000]  primeiro pensamento
+[09:27.000 --> 09:29.440]  sobre a inovação,
+[09:29.600 --> 09:31.180]  tá? E essa é a tarefa,
+[09:31.260 --> 09:33.160]  basicamente é ir lá no post e responder
+[09:33.160 --> 09:35.320]  aquela provocação
+[09:35.320 --> 09:35.840]  ali, tá?
+[09:37.960 --> 09:39.420]  Na quarta semana,
+[09:39.560 --> 09:41.420]  ou seja, não, se essa é na próxima,
+[09:41.420 --> 09:43.660]  eu já vou lançar uma proposta de um trabalho
+[09:43.660 --> 09:44.160]  final,
+[09:44.460 --> 09:46.340]  que seria basicamente,
+[09:46.900 --> 09:48.820]  pode ser algo que vocês já venham fazendo,
+[09:48.920 --> 09:50.880]  um side project de vocês, ou alguma coisa
+[09:50.880 --> 09:52.900]  assim, mas é algo que vocês
+[09:52.900 --> 09:55.620]  vão ter uma estrutura ali de entrega,
+[09:55.660 --> 09:57.120]  né? De alguns pontos que a gente vai
+[09:57.120 --> 09:59.020]  ver na disciplina, um planejamento
+[09:59.020 --> 10:01.100]  desse projeto
+[10:01.100 --> 10:03.080]  que envolve a inovação com ciência de dados.
+[10:03.560 --> 10:04.140]  É individual,
+[10:05.320 --> 10:06.960]  e eu vou colocar
+[10:06.960 --> 10:08.940]  os critérios ali que a gente vai julgar, mas
+[10:08.940 --> 10:11.180]  já adiantando pra vocês, essa disciplina
+[10:11.180 --> 10:13.180]  é uma disciplina bastante provocativa
+[10:13.840 --> 10:14.260]  mesmo,
+[10:14.460 --> 10:16.020]  em torno de, de repente,
+[10:16.200 --> 10:17.820]  fazer com que vocês se juntem
+[10:17.820 --> 10:20.440]  e tenham, usem
+[10:20.440 --> 10:21.540]  esse network que é
+[10:21.540 --> 10:23.940]  o grupo que tá aqui
+[10:23.940 --> 10:26.600]  trabalhando ciência de dados, pensando em ciência de dados
+[10:26.600 --> 10:28.520]  pra criar alguma coisa
+[10:28.520 --> 10:30.700]  nova, tá? Pode ser acadêmico?
+[10:30.880 --> 10:32.540]  Sim, pode ser acadêmico, pode ser
+[10:32.540 --> 10:34.820]  mercadológico? Sim, pode ser mercadológico.
+[10:35.900 --> 10:36.480]  E aí
+[10:36.480 --> 10:38.540]  eu vou, basicamente,
+[10:38.860 --> 10:40.660]  mentorá-los, né? Então não é um negócio
+[10:40.660 --> 10:41.960]  que eu vou passar e
+[10:41.960 --> 10:44.380]  vou cobrar depois que vocês entreguem,
+[10:44.460 --> 10:45.840]  então a gente pode ter momentos
+[10:45.840 --> 10:48.720]  no qual a gente marque alguma coisa e a gente
+[10:48.720 --> 10:50.420]  venha trabalhar junto esse projeto,
+[10:51.000 --> 10:52.540]  e eu vou ficar muito feliz
+[10:52.540 --> 10:54.420]  se daqui a alguns anos, de repente,
+[10:54.500 --> 10:56.520]  algum desses projetos for colocado em
+[10:56.520 --> 10:58.360]  prática, né, e
+[10:58.360 --> 11:00.280]  acabar indo pra frente. Hoje a gente tem
+[11:00.280 --> 11:02.540]  diversas formas de buscar
+[11:02.540 --> 11:04.120]  recurso e buscar fomento
+[11:04.120 --> 11:06.460]  pra inovação, vou também
+[11:06.460 --> 11:08.660]  colocar um tópico quanto a isso dentro do
+[11:08.660 --> 11:10.840]  dentro da disciplina,
+[11:10.920 --> 11:11.060]  tá?
+[11:12.660 --> 11:14.440]  Joia, tem uma bibliografia,
+[11:14.460 --> 11:16.600]  que a gente segue
+[11:16.600 --> 11:18.500]  aqui, né, e essa
+[11:18.500 --> 11:20.280]  bibliografia toda ela tem
+[11:20.280 --> 11:22.480]  disponível dentro da nossa biblioteca,
+[11:23.140 --> 11:24.220]  tem os links ali.
+[11:25.140 --> 11:26.440]  Aqui tem um videozinho
+[11:26.440 --> 11:28.500]  introdutório da disciplina, né?
+[11:29.200 --> 11:30.160]  A semana 1,
+[11:31.300 --> 11:32.120]  então, foi,
+[11:32.360 --> 11:33.980]  foi consolidada já,
+[11:34.280 --> 11:36.460]  eu coloquei o material, aí eu vou
+[11:36.460 --> 11:38.460]  falar um pouquinho sobre cronograma, tá?
+[11:39.140 --> 11:40.660]  Aqui no material vocês vão
+[11:40.660 --> 11:42.940]  poder acessar, tem uma apresentação
+[11:42.940 --> 11:44.200]  ali com muitos slides,
+[11:44.460 --> 11:46.560]  tá? Tudo
+[11:46.560 --> 11:48.820]  vai ser repassado hoje um pouquinho,
+[11:48.980 --> 11:50.660]  né, mas tudo, tudo
+[11:50.660 --> 11:52.700]  tá ali detalhado
+[11:52.700 --> 11:54.660]  em slides, e eu tô
+[11:54.660 --> 11:55.820]  colocando também
+[11:55.820 --> 11:58.340]  um videozinho
+[11:58.340 --> 11:58.920]  sobre
+[11:58.920 --> 12:02.460]  sobre essa aula. Então, aqui no
+[12:02.460 --> 12:04.600]  vídeo eu tô, passo esses
+[12:04.600 --> 12:06.740]  slides de fato e vou colocando
+[12:06.740 --> 12:08.720]  incremento em conteúdo,
+[12:08.720 --> 12:10.760]  e no final da semana sempre tem
+[12:10.760 --> 12:12.800]  a tarefinha, né? Então, a tarefinha
+[12:12.800 --> 12:14.440]  é vocês interagirem com o post,
+[12:14.460 --> 12:16.460]  inclusive já
+[12:16.460 --> 12:18.540]  quem quiser ir fazendo,
+[12:18.780 --> 12:20.480]  pode fazer, fica à vontade ali,
+[12:20.580 --> 12:22.460]  que já mata essa primeira atividade aqui
+[12:22.460 --> 12:23.720]  durante a nossa aula, tá?
+[12:24.740 --> 12:26.440]  A semana 2 também foi
+[12:26.440 --> 12:28.420]  já consolidada, então a semana 2
+[12:28.420 --> 12:30.140]  tem ali um mesmo
+[12:30.140 --> 12:32.460]  passo a passo,
+[12:32.580 --> 12:34.860]  né? A gente fala de inovação aberta e fechada,
+[12:35.300 --> 12:36.360]  e tem os slides,
+[12:36.700 --> 12:38.520]  tá? E aí ele
+[12:38.520 --> 12:40.740]  é consolidado com um questionariozinho,
+[12:40.960 --> 12:42.400]  né, que tem cinco
+[12:42.400 --> 12:44.440]  questões abertas para vocês responderem,
+[12:44.460 --> 12:46.460]  que eu coloquei ali no Moodle, e aí
+[12:46.460 --> 12:48.260]  a gente entra na semana 3,
+[12:48.380 --> 12:50.100]  aula síncrona, que é a que a gente tá
+[12:50.100 --> 12:52.460]  tendo agora, né? E
+[12:52.460 --> 12:54.400]  eu espero que a gente consiga repassar
+[12:54.400 --> 12:56.380]  tudo que a gente viu, e
+[12:56.380 --> 12:58.440]  também ter uma atividade em torno disso,
+[12:58.580 --> 13:00.380]  tá? Pessoal, alguma
+[13:00.380 --> 13:02.440]  dúvida, então, sobre como a gente vai
+[13:02.440 --> 13:04.460]  conduzir esse início de
+[13:05.060 --> 13:06.480]  disciplina?
+[13:07.100 --> 13:08.020]  Tudo certo?
+[13:09.920 --> 13:10.120]  Tá.
+[13:10.320 --> 13:12.220]  Eu vou passar pra vocês agora, então,
+[13:12.220 --> 13:12.580]  um
+[13:12.580 --> 13:15.660]  cronograma que foi
+[13:15.660 --> 13:17.760]  passado pelo professor André,
+[13:18.920 --> 13:20.120]  que é o cronograma
+[13:20.120 --> 13:22.100]  que a gente vai seguir oficial,
+[13:22.360 --> 13:23.840]  e eu vou deixar ele depois de
+[13:23.840 --> 13:25.280]  recado no Moodle ali,
+[13:25.940 --> 13:28.360]  mas basicamente é um cronograma
+[13:28.360 --> 13:30.480]  um cronograma
+[13:30.480 --> 13:31.060]  um pouquinho
+[13:31.060 --> 13:34.060]  diferenciado, porque a gente
+[13:34.060 --> 13:35.760]  fez o shift de uma semana,
+[13:36.740 --> 13:38.140]  teve um atraso ali no início
+[13:38.140 --> 13:40.160]  da disciplina, e a
+[13:40.160 --> 13:42.160]  gente fez
+[13:42.160 --> 13:42.540]  o shift,
+[13:42.580 --> 13:44.620]  de uma semana nos conteúdos,
+[13:44.720 --> 13:46.660]  né? Vou pegar aqui a imagem
+[13:46.660 --> 13:47.540]  que o professor André
+[13:47.540 --> 13:49.880]  me mandou só pra gente
+[13:49.880 --> 13:53.000]  só pra gente
+[13:53.000 --> 13:56.000]  estar na mesma página,
+[13:56.000 --> 14:00.440]  e aí a gente
+[14:00.440 --> 14:01.980]  pode iniciar, tá?
+[14:03.840 --> 14:04.440]  Aqui,
+[14:04.600 --> 14:06.100]  só pra mostrar pra vocês, então,
+[14:07.500 --> 14:08.420]  o cronograma
+[14:08.420 --> 14:09.440]  que a gente vai
+[14:09.440 --> 14:10.440]  fazer,
+[14:12.580 --> 14:16.080]  a gente vai seguir,
+[14:21.080 --> 14:22.900]  estão vendo aí a tela, pessoal?
+[14:26.860 --> 14:27.420]  Ok,
+[14:28.200 --> 14:30.320]  então, basicamente, a gente
+[14:30.320 --> 14:32.340]  tá, a gente tá
+[14:32.340 --> 14:33.700]  considerando essa
+[14:33.700 --> 14:35.640]  disciplina aqui, né,
+[14:36.380 --> 14:38.180]  que é a gestão
+[14:38.180 --> 14:40.740]  de inovação com ciência de dados,
+[14:41.740 --> 14:42.240]  a gente
+[14:42.240 --> 14:44.620]  considerou o início aqui na semana
+[14:44.620 --> 14:46.500]  de 15 a 21, a gente tá
+[14:46.500 --> 14:48.780]  na semana de 22 a 28,
+[14:50.120 --> 14:50.960]  que é a nossa aula
+[14:50.960 --> 14:51.940]  síncrona, né?
+[14:53.120 --> 14:54.620]  Semana de 29
+[14:54.620 --> 14:55.880]  a 5, a gente,
+[14:56.460 --> 14:58.240]  a 5 do 12, a gente tem
+[14:58.240 --> 15:00.740]  aulas assíncronas
+[15:00.740 --> 15:02.520]  online, a semana de
+[15:02.520 --> 15:04.240]  13 a 29,
+[15:04.640 --> 15:06.440]  a gente nos vê de novo, 13 a
+[15:06.440 --> 15:08.500]  19 de dezembro, a gente
+[15:08.500 --> 15:10.600]  nos vê de novo, e
+[15:10.600 --> 15:11.840]  depois, na semana,
+[15:12.240 --> 15:14.360]  ali, aquela semaninha de Natal e Ano Novo,
+[15:15.680 --> 15:16.700]  a gente tem
+[15:16.700 --> 15:18.260]  uma assíncrona,
+[15:18.700 --> 15:20.500]  e as nossas avaliações, elas
+[15:20.500 --> 15:22.540]  ficam agendadas
+[15:22.540 --> 15:24.500]  lá para a primeira semana do ano,
+[15:24.600 --> 15:26.000]  até o dia 16, tá?
+[15:26.780 --> 15:28.260]  Então, o cronograma
+[15:28.260 --> 15:30.400]  suave, como eu disse, a disciplina não
+[15:30.400 --> 15:32.380]  tem intenção de
+[15:32.380 --> 15:34.780]  gerar
+[15:34.780 --> 15:36.660]  mais problemas para vocês,
+[15:36.720 --> 15:38.860]  vamos dizer assim, em termos de
+[15:38.860 --> 15:40.480]  esforço e etc,
+[15:41.160 --> 15:41.960]  mas a gente,
+[15:42.240 --> 15:44.100]  vai provocar vocês
+[15:44.100 --> 15:46.620]  o tempo todo aí, em torno do que
+[15:46.620 --> 15:48.680]  a gente vai poder
+[15:48.680 --> 15:50.600]  extrair
+[15:50.600 --> 15:51.980]  como conteúdo aí
+[15:51.980 --> 15:54.560]  do nosso processo formativo,
+[15:54.660 --> 15:54.800]  tá?
+[15:56.400 --> 15:58.420]  Tudo bem, então, pessoal, quanto ao cronograma,
+[15:58.480 --> 16:00.260]  alguém tem alguma sugestão quanto a isso?
+[16:01.600 --> 16:02.140]  Tá jóia?
+[16:03.040 --> 16:04.560]  Ok, e aí eu vou
+[16:04.560 --> 16:06.580]  fazer uma postagem dele ali,
+[16:06.580 --> 16:08.480]  como deu um shift ali de uma semana,
+[16:09.140 --> 16:10.480]  a gente faz essa
+[16:10.480 --> 16:12.220]  atualização,
+[16:12.240 --> 16:12.940]  tá bem?
+[16:13.960 --> 16:16.240]  Bom, eu preparei um
+[16:16.760 --> 16:18.380]  mapa mental ali,
+[16:18.760 --> 16:19.580]  né, para
+[16:19.580 --> 16:21.360]  trabalhar com vocês,
+[16:23.040 --> 16:23.760]  e
+[16:23.760 --> 16:26.280]  basicamente ele
+[16:26.280 --> 16:28.000]  vai nortear o que a gente vai conversar.
+[16:28.120 --> 16:30.260]  Tem alguns conteúdos que são coincidentes
+[16:30.260 --> 16:32.420]  com a semana 1 e 2, que eu já coloquei
+[16:32.420 --> 16:34.220]  conteúdo lá, mas tem
+[16:34.220 --> 16:36.100]  algumas coisas que são um pouquinho novas,
+[16:37.020 --> 16:38.480]  e é esse o roteiro
+[16:38.480 --> 16:40.200]  que eu espero que a gente converse agora,
+[16:40.200 --> 16:41.980]  tá? A gente vai,
+[16:42.240 --> 16:44.140]  tentar construir esse mapa
+[16:44.140 --> 16:47.000]  mental consolidado
+[16:47.000 --> 16:48.940]  com os conteúdos,
+[16:48.980 --> 16:50.600]  né, das semanas anteriores,
+[16:50.700 --> 16:52.000]  e avançando um pouquinho
+[16:52.000 --> 16:54.700]  no conteúdo que a gente tem de ver
+[16:54.700 --> 16:56.280]  até o final da disciplina.
+[16:56.760 --> 16:58.520]  Então eu organizei, assim, na parte
+[16:58.520 --> 17:00.300]  de metodologia, né, essa
+[17:00.300 --> 17:02.440]  metodologia foi o que a gente acabou
+[17:02.440 --> 17:04.480]  de, a gente acabou de fazer
+[17:04.480 --> 17:05.400]  aqui, tá? A gente
+[17:05.400 --> 17:08.860]  acabou de acertar
+[17:08.860 --> 17:09.620]  esse
+[17:09.620 --> 17:12.200]  esse conteúdo,
+[17:12.240 --> 17:14.740]  esse conteúdo aqui, então já, já posso até
+[17:14.740 --> 17:17.000]  tirar esse cara daqui, para não confundir,
+[17:17.000 --> 17:19.560]  tá? A gente vai falar um pouquinho de
+[17:19.560 --> 17:22.920]  fundamentos da inovação, tá? É algo
+[17:22.920 --> 17:24.780]  mais associado à primeira aula ali,
+[17:24.780 --> 17:29.100]  transformação digital, a inovação em
+[17:29.100 --> 17:31.740]  dados, né, em data-driven innovation, que
+[17:31.740 --> 17:33.480]  está totalmente associado ao que a gente
+[17:33.480 --> 17:36.060]  vai ver aqui, e depois nós vamos para
+[17:29.100 --> 17:31.740]  dados, né, em data-driven innovation, que
+[17:31.740 --> 17:33.480]  está totalmente associado ao que a gente
+[17:33.480 --> 17:36.060]  vai ver aqui, e depois nós vamos para
+[17:36.060 --> 17:38.100]  esse lado aqui do mapa mental, vamos
+[17:38.100 --> 17:41.100]  falar um pouco sobre identificação de
+[17:41.100 --> 17:42.100]  inovação,
+[17:42.100 --> 17:44.780]  métodos de deação e brainstorming e
+[17:36.060 --> 17:38.100]  esse lado aqui do mapa mental, vamos
+[17:38.100 --> 17:41.100]  falar um pouco sobre identificação de
+[17:41.100 --> 17:42.100]  inovação,
+[17:42.100 --> 17:44.780]  métodos de deação e brainstorming e
+[17:44.780 --> 17:46.240]  cultura e liderança para inovação,
+[17:46.240 --> 17:49.000]  depois a gente acaba encerrando ali,
+[17:49.000 --> 17:51.960]  fazendo overview da nossa, da nossa
+[17:51.960 --> 17:56.020]  aula, tá bem? Vamos nessa, então pessoal, a
+[17:56.020 --> 17:57.940]  ideia aqui é organizar os fundamentos,
+[17:44.780 --> 17:46.240]  cultura e liderança para inovação,
+[17:46.240 --> 17:49.000]  depois a gente acaba encerrando ali,
+[17:49.000 --> 17:51.960]  fazendo overview da nossa, da nossa
+[17:51.960 --> 17:56.020]  aula, tá bem? Vamos nessa, então pessoal, a
+[17:56.020 --> 17:57.940]  ideia aqui é organizar os fundamentos,
+[17:57.940 --> 18:01.060]  conceitos, métodos, até trazer alguns
+[18:01.060 --> 18:04.980]  exemplos para vocês, né, do que do que a
+[18:04.980 --> 18:08.020]  gente tinha visto, tá? E eu vou me
+[18:08.020 --> 18:11.100]  guiando nessa linha, conversando, não é um
+[17:57.940 --> 18:01.060]  conceitos, métodos, até trazer alguns
+[18:01.060 --> 18:04.980]  exemplos para vocês, né, do que do que a
+[18:04.980 --> 18:08.020]  gente tinha visto, tá? E eu vou me
+[18:08.020 --> 18:11.100]  guiando nessa linha, conversando, não é um
+[18:11.100 --> 18:17.920]  então vocês podem, de fato, trazer ali algum conceito junto comigo, fiquem bem à vontade com isso, tá bom?
+[18:19.500 --> 18:21.120]  Beleza, então, pessoal, vamos lá.
+[18:24.080 --> 18:29.480]  Bom, sobre o conceito de inovação, né, associado a fundamentos de inovação,
+[18:11.100 --> 18:17.920]  então vocês podem, de fato, trazer ali algum conceito junto comigo, fiquem bem à vontade com isso, tá bom?
+[18:19.500 --> 18:21.120]  Beleza, então, pessoal, vamos lá.
+[18:24.080 --> 18:29.480]  Bom, sobre o conceito de inovação, né, associado a fundamentos de inovação,
+[18:30.220 --> 18:33.800]  a gente vai começar por ele porque é um conceito central, tipo,
+[18:30.220 --> 18:33.800]  a gente vai começar por ele porque é um conceito central, tipo,
+[18:34.580 --> 18:40.520]  é a espinha dorsal do que vai fazer a gente entender o conteúdo associado à disciplina.
+[18:40.520 --> 18:45.220]  Mas, basicamente, a gente pode dizer que conceito de inovação
+[18:34.580 --> 18:40.520]  é a espinha dorsal do que vai fazer a gente entender o conteúdo associado à disciplina.
+[18:40.520 --> 18:45.220]  Mas, basicamente, a gente pode dizer que conceito de inovação
+[18:45.220 --> 18:53.320]  não é apenas criatividade ou tecnologia, é um processo estruturado e intencional, tá?
+[18:45.220 --> 18:53.320]  não é apenas criatividade ou tecnologia, é um processo estruturado e intencional, tá?
+[18:53.360 --> 18:57.580]  Então, quando a gente fala de inovação, não é somente apegar uma tecnologia que a gente tem,
+[18:58.320 --> 19:00.820]  aplicar e tentar ter um resultado novo.
+[19:01.080 --> 19:05.980]  Então, quando a gente fala de inovação, a gente fala diretamente em resolver um problema,
+[19:06.680 --> 19:09.760]  melhorar um processo ou criar algo que não existe.
+[19:10.520 --> 19:13.320]  E na ciência de dados, isso é muito mais forte.
+[19:13.320 --> 19:18.660]  Acho que todos vocês, principalmente quem tem uma outra área,
+[19:19.200 --> 19:26.220]  já tem visto que a ciência de dados pode revolucionar a área na qual vocês atuam
+[19:26.220 --> 19:32.320]  e mudar a forma como a gente enxerga padrão, como a gente valida algumas hipóteses, ok?
+[19:32.880 --> 19:38.660]  Então, basicamente, a gente tem a inovação como forma de criação de valor, tá?
+[19:38.660 --> 19:39.660]  A inovação como...
+[19:40.520 --> 19:47.100]  Como um processo gerenciável e a inovação como uma intencionalidade
+[19:47.100 --> 19:50.220]  de criar algum resultado, uma estratégia.
+[19:50.980 --> 19:58.060]  A inovação, ela não pode ser considerada algo ocasional, algo coincidente, tá?
+[19:58.200 --> 20:03.040]  Ela é algo que a gente trabalha em nível generalista,
+[20:04.580 --> 20:09.860]  considerando que a gente está trabalhando com a intenção clara de se obter,
+[20:10.520 --> 20:12.920]  uma melhoria, ok?
+[20:14.020 --> 20:15.520]  Bom, nesse contexto,
+[20:17.000 --> 20:18.160]  nas primeiras...
+[20:18.160 --> 20:21.420]  Nos primeiros slides lá que a gente colocou na semana 1,
+[20:21.700 --> 20:23.880]  quem já assistiu o conteúdo,
+[20:24.340 --> 20:26.720]  vai ver que a gente fala que inovação,
+[20:27.200 --> 20:29.360]  ela tem alguns tipos,
+[20:29.880 --> 20:33.120]  alguns tipos, algumas categorias, tá?
+[20:33.760 --> 20:36.360]  É muito importante conceitualizar a inovação,
+[20:38.440 --> 20:39.760]  porque, de repente,
+[20:39.900 --> 20:40.360]  ela forma...
+[20:40.520 --> 20:43.420]  Aumenta aquela intencionalidade de inovar,
+[20:44.140 --> 20:48.640]  que é algo que, realmente, dependendo do modo como a gente inovar,
+[20:48.740 --> 20:53.400]  pode ser que a gente revolucione um setor, uma área, um processo,
+[20:54.340 --> 20:59.120]  e quando a gente fala de inovação, obviamente, a gente está falando até de obter
+[20:59.120 --> 21:05.220]  vantagens financeiras, além da questão de produtividade, né?
+[21:05.260 --> 21:06.040]  Olha que coisa boa.
+[21:06.040 --> 21:09.040]  De repente, a gente está estudando aqui algo que pode deixar a gente...
+[21:10.520 --> 21:14.660]  Ou as nossas gerações futuras num conforto financeiro muito bom.
+[21:15.220 --> 21:17.020]  Sempre que a gente fala em inovação, realmente,
+[21:17.720 --> 21:21.880]  financeiramente, a gente fala de retorno muito rápido, tá?
+[21:23.340 --> 21:26.420]  Bom, existem vários tipos de inovação, né?
+[21:28.420 --> 21:30.220]  Aqui a gente vai trazer algumas delas.
+[21:30.300 --> 21:33.900]  A inovação incremental é aquela que melhora algo já existente.
+[21:34.160 --> 21:36.480]  Imagine você que tem um processo ali,
+[21:36.480 --> 21:39.940]  por exemplo, na área de manutenção industrial.
+[21:40.520 --> 21:45.820]  A gente pode ter um processo, uma checklist ali de manutenção,
+[21:45.820 --> 21:52.220]  que é feita de modo manual, em máquinas, por exemplo, motores e outros, né?
+[21:52.220 --> 21:57.220]  E, de repente, a gente vai querer, de fato, melhorar isso, né?
+[21:57.220 --> 22:03.220]  E fazer com que a gente tenha alguns sensores e alguns atuadores ali
+[22:03.220 --> 22:09.460]  que fazem um pré-preenchimento ali de uma checklist manual, de modo automatizado.
+[22:09.460 --> 22:10.420]  Ou seja, a gente tem uma checklist de manutenção, né?
+[22:10.420 --> 22:15.920]  Ou seja, a gente tem já a inovação consolidada dentro de uma área já em construção, né?
+[22:17.460 --> 22:23.880]  E aí a gente vai complementar aquelas checklists já existentes com algo tecnológico.
+[22:24.020 --> 22:26.040]  Então, a gente está incrementando algo, tá?
+[22:26.620 --> 22:30.480]  Agora, imagine que a gente não tem nenhum processo de manutenção nessa indústria
+[22:30.480 --> 22:34.500]  e a gente vai criar algo totalmente novo, do zero,
+[22:34.500 --> 22:39.500]  criar checklist, criar sensores que vão sensoriar,
+[22:40.420 --> 22:42.800]  máquinas e outros.
+[22:42.800 --> 22:46.760]  Aí a gente já está falando de um nível de inovação que a gente chama de radical,
+[22:46.940 --> 22:51.240]  criar algo completamente novo, que não existia.
+[22:51.740 --> 23:00.780]  De repente, os envolvidos naquele problema nem sabiam da possibilidade de existir uma melhoria.
+[23:01.140 --> 23:03.820]  E aí a gente está falando de algo radical, tá?
+[23:04.840 --> 23:09.840]  Mas tem algo mais profundo ainda, que é a inovação disruptiva,
+[23:09.840 --> 23:10.340]  que é aquela que...
+[23:14.340 --> 23:17.960]  traz conceitos mais agudos, né?
+[23:17.960 --> 23:23.720]  E nesse contexto do exemplo que a gente está falando de manutenção industrial,
+[23:23.720 --> 23:27.460]  a disruptiva seria, por exemplo, a indústria 4.0,
+[23:27.460 --> 23:30.360]  com máquinas autoprogramáveis,
+[23:30.360 --> 23:38.300]  que se de repente algum sensor ali identificasse mudanças de rotação, vibração, temperatura,
+[23:38.300 --> 23:39.860]  a máquina se autorregularia,
+[23:39.860 --> 23:40.360]  a indústria 4.0, com máquinas autoprogramáveis, que se de repente algum sensor ali identificasse mudanças de rotação, vibração, temperatura, a máquina se autorregularia,
+[23:40.360 --> 23:47.740]  para não ter nenhum tipo de parada, nenhum tipo de quebra, geraria um alerta, alguma coisa nesse sentido.
+[23:47.740 --> 23:51.600]  Ou seja, não tem mais o papel humano fazendo um checklist,
+[23:51.600 --> 23:57.640]  tem agora sim a questão de censureamento, IoT,
+[23:57.640 --> 24:00.860]  conectividade o tempo todo fazendo esse papel.
+[24:00.860 --> 24:04.900]  Então, ali eu estou indo para a linha do tipo de inovação disruptiva.
+[24:04.900 --> 24:08.440]  E a gente está vivendo isso ainda num conceito bastante...
+[24:08.440 --> 24:09.240]  bastante...
+[24:09.240 --> 24:09.780]  bastante...
+[24:09.780 --> 24:15.400]  complexo, mas a indústria tem se modernizado nesse sentido.
+[24:15.400 --> 24:21.200]  Quando a gente tem diversos elementos que se conectam em uma ordem,
+[24:21.200 --> 24:26.900]  e essa ordem pode ser alterada, pode ser mudada, enfim,
+[24:26.900 --> 24:29.160]  a gente também está falando de inovação,
+[24:29.160 --> 24:31.160]  a gente está falando de inovação arquitetural,
+[24:21.200 --> 24:26.900]  e essa ordem pode ser alterada, pode ser mudada, enfim,
+[24:26.900 --> 24:29.160]  a gente também está falando de inovação,
+[24:29.160 --> 24:31.160]  a gente está falando de inovação arquitetural,
+[24:31.160 --> 24:34.360]  ou inovação em nível de reconfiguração.
+[24:31.160 --> 24:34.360]  ou inovação em nível de reconfiguração.
+[24:34.360 --> 24:36.560]  Então, só para a gente ter noção
+[24:36.560 --> 24:39.220]  desses tipos de inovação,
+[24:34.360 --> 24:36.560]  Então, só para a gente ter noção
+[24:36.560 --> 24:39.220]  desses tipos de inovação,
+[24:39.220 --> 24:43.820]  todos eles têm valor, têm algum sentido,
+[24:43.820 --> 24:52.220]  e são realmente inovações que a gente tem que pensar na hora que estiver trabalhando
+[24:52.220 --> 24:56.480]  e consentindo ali algum nível de inovação,
+[24:52.220 --> 24:56.480]  e consentindo ali algum nível de inovação,
+[24:56.480 --> 24:58.180]  a gente pode pensar nisso.
+[24:56.480 --> 24:58.180]  a gente pode pensar nisso.
+[24:58.180 --> 25:01.280]  No trabalho prático que nós vamos ter, por exemplo,
+[25:01.280 --> 25:04.120]  para quem é de algum setor específico.
+[25:04.120 --> 25:05.580]  Ah, eu sou professor, eu sou da área de administração,
+[25:05.580 --> 25:07.340]  ah, eu sou da área de engenharia,
+[25:07.340 --> 25:08.040]  então, por exemplo, para quem é de algum setor específico,
+[25:08.040 --> 25:08.340]  profissor, eu sou da área de administração,
+[25:08.340 --> 25:09.200]  ah, eu sou da área de engenharia, então, por exemplo, para quem é de algum setor específico,
+[25:09.220 --> 25:14.260]  química, eu estou fazendo um curso, eu sou da área de engenharia civil, eu estou fazendo um curso,
+[25:14.900 --> 25:21.340]  eu já convido vocês a pensarem, né, quais inovações e quais os tipos de inovação a ciência de dados
+[25:21.340 --> 25:30.640]  pode proporcionar para o setor de vocês. A inovação incremental, a disruptiva, arquitetural, né,
+[25:30.640 --> 25:39.480]  então já convido vocês a pensar, não é algo que vocês vão obter resultado rápido assim, né,
+[25:39.580 --> 25:44.580]  de fechar essa conta, né, então é legal pensar, brainstormar um pouquinho e tentar entender
+[25:44.580 --> 25:48.860]  qual tipo de inovação a ciência de dados pode proporcionar para a área de vocês.
+[25:49.280 --> 25:55.920]  Para quem é de computação, já adianto que a ciência de dados pode ajudar em todos esses setores ali,
+[25:55.920 --> 26:00.620]  né, com talvez menos na área arquitetural, mas nas demais.
+[26:00.640 --> 26:05.400]  Ali a gente vê o sentido de inovação, tá?
+[26:06.100 --> 26:13.100]  O referencial teórico para essa área, né, existem alguns autores, a gente vai citar eles,
+[26:13.200 --> 26:21.120]  é legal que vocês leiam, tá, para beber da fonte de quem criou esses tipos de conceitos, tá?
+[26:21.660 --> 26:28.260]  Então a gente quer destacar principalmente três autores, né, tem o Schwenter, que com a ideia de
+[26:29.440 --> 26:30.480]  destruição criativa.
+[26:30.640 --> 26:34.360]  Ele mostra que a inovação, ela implica em substituir algo antigo por novo.
+[26:35.320 --> 26:42.460]  O Dossi também, ele fala da parte de trajetória tecnológica, ele mostra conhecimento acumulado,
+[26:43.500 --> 26:46.480]  sempre pode gerar novas possibilidades técnicas.
+[26:47.680 --> 26:52.480]  Freeman e Solt, eles vão reforçar que a inovação é um motor de competitividade industrial,
+[26:52.480 --> 27:00.480]  e isso é verdade, na área industrial a inovação, ela é disruptiva, é realmente algo muito, muito agonizante,
+[27:00.640 --> 27:01.420]  muito agudo, tá bom?
+[27:02.420 --> 27:09.480]  Esses fundamentos, eles vão ajudar vocês a conceitualizar por que a inovação, ela é tão essencial na economia moderna.
+[27:11.240 --> 27:12.260]  Tudo bem até aqui, pessoal?
+[27:14.460 --> 27:22.000]  Jóia, só lembrando, tem mais conceitos associados a isso, e mais material ali no nosso mundo.
+[27:22.000 --> 27:28.580]  Então, aqui a gente vai conceitualizando e trazendo essas informações.
+[27:30.640 --> 27:37.580]  Bom, na era digital de dados, como que a gente pode falar de inovação e transformação digital, tá, pessoal?
+[27:38.260 --> 27:42.700]  A gente está vivendo uma revolução totalmente impulsionada por dados.
+[27:44.540 --> 27:49.020]  Quem é da computação, não sei se a gente tem o pessoal da computação aí,
+[27:49.020 --> 27:56.720]  mas a gente vem falando de cloud computing, big data, as APIs, existe um conceito novo,
+[27:57.380 --> 28:00.500]  que novo não, né, já é antigo, mas a gente trata.
+[28:00.640 --> 28:05.680]  Como novo, porque hoje todo o negócio passa por isso, que é o API economy,
+[28:05.680 --> 28:11.320]  com as APIs modernas que a gente tem, com a possibilidade de cloud computing,
+[28:11.320 --> 28:19.820]  como a gente vem tendo, serviços, micro serviços, a gente consegue fazer sistemas interoperáveis,
+[28:19.820 --> 28:23.920]  sem precisar dampar o dado de um lado para o outro, tá?
+[28:23.920 --> 28:30.260]  As APIs permitem que a gente consiga, APIs parceiras ou APIs públicas,
+[28:30.260 --> 28:34.260]  permitem que a gente consiga informações de bancos de dados diversos,
+[28:34.320 --> 28:40.820]  sem precisar ter uma cópia daquele banco, em um tempo totalmente aceitável para o negócio, ok?
+[28:42.820 --> 28:47.160]  Bom, então tudo isso cria uma infraestrutura poderosa,
+[28:47.260 --> 28:52.160]  que permite que a gente colete, armazene e analise dados em larga escala.
+[28:52.640 --> 28:57.180]  Essa abundância de dados, ela mudou completamente o jeito de inovar,
+[28:57.180 --> 29:00.180]  então hoje é big data, cloud computing,
+[29:00.260 --> 29:07.260]  elas trazem para nós ali uma nova vertente, uma nova possibilidade.
+[29:07.260 --> 29:12.820]  Para falar para vocês, assim, algo que para mim foi disruptivo, assim, para não deixar sem um exemplo,
+[29:12.820 --> 29:18.260]  eu lembro da época que o Netflix começou a ser criado ali,
+[29:18.260 --> 29:23.760]  eles tinham uma estratégia de mercado que era você assinar um mês gratuito, né,
+[29:23.760 --> 29:28.380]  depois poder continuar a assinatura a um valor de bem baixo, de 19, 20 reais na época, né,
+[29:28.380 --> 29:29.380]  e depois poder continuar a assinatura a um valor de bem baixo, de 19, 20 reais na época, né,
+[29:29.380 --> 29:30.240]  e depois poder continuar a assinatura a um valor de bem baixo, de 19, 20 reais na época, né,
+[29:30.260 --> 29:36.000]  e eu assinei por ser da área de engenharia de software,
+[29:36.000 --> 29:39.780]  eu duvidava que eu conseguiria ter um vídeo de alta qualidade,
+[29:39.780 --> 29:46.580]  extremado, dentro de um navegador web ou até dentro de uma TV Smart,
+[29:46.580 --> 29:54.420]  ou usando na época ali os dispositivos, né, de, por exemplo, o Google,
+[29:54.420 --> 29:58.420]  aqueles dispositivos, né, que a gente, pendrivezinhos que a gente colocava na TV
+[29:58.420 --> 29:59.380]  para...
+[29:59.380 --> 30:00.180]  para...
+[30:00.180 --> 30:01.620]  Chromecast, né, por exemplo,
+[30:02.480 --> 30:04.960]  para adaptar a TV para ser Smart,
+[30:05.660 --> 30:09.000]  e eu me surpreendi e fui estudar aquilo, né,
+[30:09.000 --> 30:15.660]  e depois eu fui entender a força que cloud computing e microserviços tinham
+[30:15.660 --> 30:19.740]  a ponto de poder fazer com esse vídeo pesado,
+[30:19.820 --> 30:24.100]  que às vezes eu demorava horas ou até um dia ou outro para baixar, né,
+[30:24.100 --> 30:30.000]  a gente baixava esses vídeos da internet para assistir em 4K ou em alta qualidade,
+[30:30.180 --> 30:35.980]  e eles conseguiram realmente montar uma arquitetura usando cloud computing,
+[30:35.980 --> 30:41.620]  bastante, bastante informações arquiteturais, recursos arquiteturais,
+[30:41.620 --> 30:46.560]  como Docker e outras Estratégias, microserviços, mensageria
+[30:46.560 --> 30:51.100]  e fazer esses dados aparecerem em tempo real ali na tela,
+[30:51.100 --> 30:52.460]  uma qualidade absurda.
+[30:52.460 --> 30:57.540]  Aquilo para mim foi uma revolução, né, totalmente de engenharia de software,
+[30:57.540 --> 30:58.420]  totalmente arquitetural.
+[30:58.420 --> 30:59.540]  E se a gente conseguir ir falando das coisas que eu já fiz, né, que eu acho que são coisas que são muito importantes para você, né, justamente o desenvolvimento do canal, né, de software, do software, de software, de software, de software, da área de tecnologia, de surpresa...
+[30:59.540 --> 31:11.860]  Se a gente considerar em nível de inovação, foi uma inovação, como a gente acabou de falar ali, uma inovação arquitetural e de reorganização,
+[31:11.860 --> 31:17.060]  que tudo ali a gente já tinha e eles acabaram reestruturando as coisas, tá?
+[31:17.700 --> 31:26.860]  Bom, os impactos da inovação são bastante importantes de serem analisados, né?
+[31:26.860 --> 31:44.820]  Os dados aceleram, a experimentação da inovação é importante, então dados aceleram a experimentação da inovação, melhoram previsões, automatizam processos e basicamente permite que a gente personalize soluções.
+[31:44.820 --> 31:49.680]  Então, empresas que usam dados estrategicamente, eles vão conseguir reduzir incertezas.
+[31:50.380 --> 31:55.620]  Quando o dado vira uma informação, e não só um dado, né?
+[31:55.960 --> 31:56.820]  Ele...
+[31:56.860 --> 32:00.580]  Ele permite que a escala seja muito mais rápida, tá?
+[32:01.580 --> 32:09.060]  É bem provável que a gente consiga números bastante efetivos quando a gente tem inovação baseada em dados.
+[32:09.060 --> 32:20.120]  Então, para vocês que estão ali dentro de um setor, dentro de alguma coisa, podem ficar bem tranquilos que se vocês forem inovar com dados, com ciência de dados,
+[32:20.460 --> 32:26.280]  o tiro é mais certo do que outros níveis de inovação, porque os dados normalmente não mentem, ok?
+[32:27.020 --> 32:33.400]  E, na verdade, é uma tabela de dados, que você pode usar para dadar os dados, mas, provavelmente, você consegue fazer um melhor resultado de cl miserable.
+[32:34.400 --> 32:35.360]  Ha-ha!
+[32:35.360 --> 32:37.040]  O que você назад, stresses...
+[32:37.040 --> 32:37.780] ILL, inclusive.
+[32:37.780 --> 32:43.760]  Seja лучше notar a cosmeníaco que possivelmente para você que acontecido com caso estranho.
+[32:43.760 --> 32:48.860]  Se você sabia Applicado por .
+[32:48.960 --> 32:55.300]  Ou, se você está avegar assado na nova geração e enfiado em Tekonnen, dogos são coisas que são gratuitamente disponíveis aqui no Brasil...
+[32:55.300 --> 32:55.840]  Sudamedia.
+[32:55.840 --> 32:59.120]  a transformação com dados gera alguns papéis que não existiam antes.
+[32:59.600 --> 33:03.500]  Por exemplo, cientista de dados, que já são padrão, a gente já conhece,
+[33:04.080 --> 33:06.160]  os engenheiros de dados, o data engineers,
+[33:07.720 --> 33:12.080]  os PMs de dados, product managers, data product managers,
+[33:12.760 --> 33:15.680]  também é um papel que está cada vez mais comum,
+[33:17.440 --> 33:20.660]  analista de dados, orientados à experimentação,
+[33:20.660 --> 33:26.640]  além disso, as organizações também podem desenvolver suas próprias culturas de dados
+[33:26.640 --> 33:28.520]  e atribuir papéis para essas pessoas.
+[33:29.180 --> 33:32.060]  Então, para quem está querendo pivotar a carreira,
+[33:33.420 --> 33:37.840]  e fazendo já o curso aqui de ciência de dados, eu vou deixar em destaque,
+[33:37.980 --> 33:40.940]  de repente a profissão que vocês vão estar atuando dentro da empresa
+[33:40.940 --> 33:45.440]  ou do setor que vocês atuam, ela ainda não existe,
+[33:45.600 --> 33:48.520]  ou existe fora do Brasil e no Brasil não existe ainda,
+[33:48.520 --> 33:50.520]  então, realmente, fiquem bastante atentos,
+[33:50.660 --> 33:54.500]  fiquem atentos quanto a isso, porque a gente vai ter muitos papéis novos
+[33:54.500 --> 33:59.500]  e competências que ainda não existem, sendo cunhadas, né,
+[33:59.540 --> 34:01.880]  e sendo surgidas nesse contexto, ok?
+[34:04.100 --> 34:06.560]  Bom, alguma dúvida até aqui, pessoal?
+[34:06.660 --> 34:10.260]  Se a gente passa no core da inovação baseada em dados?
+[34:12.200 --> 34:16.040]  Joia? Bom, vamos avançando então, tá?
+[34:17.360 --> 34:20.340]  Inovação baseada em dados, ou Data Dreaming Innovation,
+[34:20.340 --> 34:25.040]  é um conceito que a gente também vai abordar dentro da disciplina,
+[34:25.120 --> 34:26.520]  já vem sendo abordado, tá?
+[34:28.320 --> 34:31.040]  Resumidamente, a inovação orientada a dados é um processo
+[34:31.040 --> 34:36.760]  no qual decisões, hipóteses e soluções,
+[34:37.380 --> 34:41.660]  eles vão ser guiados por evidências, análises,
+[34:42.280 --> 34:43.700]  e pela não intuição, né?
+[34:43.720 --> 34:46.580]  Então, quando a gente usa esse conceito da não intuição,
+[34:47.280 --> 34:49.580]  as coisas ficam bem claras.
+[34:50.340 --> 34:54.980]  Por exemplo, quando eu era pequeno, né,
+[34:55.180 --> 34:58.080]  eu vou ter que me entregar a minha idade,
+[34:58.160 --> 35:01.000]  hoje eu tô com 38, vou fazer 39 anos,
+[35:01.980 --> 35:07.000]  mas quando eu era ali um gurizinho ali, de 8 a 10, 11 anos,
+[35:08.000 --> 35:10.280]  quando o carro do meu pai tinha algum problema,
+[35:10.360 --> 35:12.480]  ele levava num mecânico de confiança, né,
+[35:13.420 --> 35:17.180]  e normalmente o diagnóstico do mecânico era andar com o carro,
+[35:17.180 --> 35:20.180]  por exemplo, pastilha de freio ou problema em suspensão,
+[35:20.340 --> 35:22.920]  isso era clássico, a gente andava com o carro,
+[35:23.780 --> 35:26.740]  o cara ouvia e falava, ah, isso é bandeja,
+[35:26.840 --> 35:32.500]  ah, isso é amortecedor, ah, isso é freio,
+[35:32.580 --> 35:35.060]  mas não chegou no disco ainda, tá só na pastilha,
+[35:35.120 --> 35:36.140]  vamos trocar a pastilha.
+[35:37.960 --> 35:44.300]  E normalmente tava errado o diagnóstico do mecânico do meu pai,
+[35:44.340 --> 35:45.740]  mas ele era muito amigo do meu pai,
+[35:45.740 --> 35:47.380]  meu pai continuava indo nele,
+[35:47.660 --> 35:49.860]  e gastando um pouquinho a mais do que,
+[35:50.340 --> 35:53.260]  se ele tivesse um lugar que tivesse um diagnóstico mais preciso.
+[35:54.300 --> 35:58.500]  Mas era um diagnóstico totalmente voltado à intuição, né,
+[35:58.740 --> 36:02.420]  o mecânico não tinha nenhum dado que ele trabalhasse ali,
+[36:02.520 --> 36:07.900]  ou uma evidência pra cravar o diagnóstico do que era preciso ser trocado no carro do meu pai.
+[36:09.860 --> 36:12.020]  Mas ele era bom de lábia, ele continuava,
+[36:12.160 --> 36:15.020]  mesmo errando o diagnóstico, ele continuava com o cliente.
+[36:15.900 --> 36:20.020]  Hoje a gente tem isso já cada vez mais raro, né,
+[36:20.340 --> 36:23.000]  isso deve tender a não existir mais,
+[36:23.180 --> 36:25.920]  porque os carros estão cada vez mais censureados, né,
+[36:26.460 --> 36:32.380]  e de repente tem até instruções em manual que evidenciam diagnósticos.
+[36:32.500 --> 36:37.260]  Então, por exemplo, a questão da pastilha de freio, por exemplo,
+[36:37.600 --> 36:43.600]  pode simplesmente ter um sensor que verifica a massa da pastilha,
+[36:43.600 --> 36:48.700]  ou a densidade da pastilha, e quando ela atinge um nível mínimo,
+[36:49.700 --> 36:50.100]  ela...
+[36:50.340 --> 36:54.880]  pode dar uma luzinha ali e indicar um alerta de troca, né, no carro.
+[36:55.700 --> 37:01.360]  E isso é um nível de inovação bastante interessante, né,
+[37:01.360 --> 37:05.700]  uma inovação orientada à evidência, orientada a dados.
+[37:06.540 --> 37:11.780]  Aqui o conceito que a gente vai trazer, ele é um pouquinho parecido, né,
+[37:11.780 --> 37:18.380]  com essa evolução, né, e é nesse sentido que a gente provoca vocês, né,
+[37:18.940 --> 37:19.700]  é...
+[37:19.700 --> 37:27.100]  a parte conceitual aqui é que a inovação, ela tem que ser guiada por informações
+[37:27.100 --> 37:32.800]  e dados que vão mudar totalmente a forma de se criar produtos,
+[37:32.960 --> 37:36.340]  validar ideias ou validar informações, tá?
+[37:37.400 --> 37:45.500]  Então, é um exemplo clássico ali, né, de como a gente tem ciclo rápido
+[37:45.500 --> 37:49.280]  e pode ser guiada por evidência e uso sistemático de dados,
+[37:49.280 --> 37:50.620]  para criar valor, tá?
+[37:52.040 --> 37:57.920]  A isso, a gente tem um processo, uma mecânica da inovação baseada com dados.
+[37:57.920 --> 38:00.660]  Essa mecânica segue alguns pilares.
+[38:01.580 --> 38:04.760]  O primeiro pilar é a identificação do padrão, né,
+[38:04.920 --> 38:08.480]  ou um padrão funcional ok, ou um padrão problemático.
+[38:09.200 --> 38:14.040]  A previsão desse comportamento para os padrões que a gente identificou.
+[38:15.180 --> 38:18.920]  A experimentação contínua e melhoria iterativa.
+[38:19.280 --> 38:26.580]  Então, essa mecânica desse jogo, ela permite que a gente tenha soluções rápidas,
+[38:26.780 --> 38:29.160]  precisas e mais escaláveis também, tá?
+[38:29.600 --> 38:35.360]  Então, essa mecânica e esse processo, eu chamaria de processo de inovação com dados,
+[38:35.460 --> 38:36.740]  é quase que contínuo.
+[38:37.320 --> 38:43.060]  Então, só ligar um alerta na cabeça de vocês ali para diversas áreas que vocês tenham, né?
+[38:45.960 --> 38:48.940]  Tentem pensar em como isso pode encaixar,
+[38:48.940 --> 38:56.580]  dentro do dia a dia do trabalho de vocês, pensando nesses pilares, né, de inovação, tá?
+[38:57.840 --> 39:01.920]  Se fizer sentido para vocês, me põe até à disposição para discutir, né,
+[39:01.920 --> 39:05.860]  como identificar, vocês trazem o problema, a gente marca uma sessão, uma mentoria,
+[39:05.980 --> 39:10.920]  a gente pode discutir isso aí de forma direta, ok?
+[39:11.700 --> 39:14.100]  Bom, exemplos então, tá?
+[39:14.100 --> 39:18.920]  E tem alguns exemplos daquele processo, daquela mecânica de inovação com dados,
+[39:18.940 --> 39:20.940]  que a gente pode destacar.
+[39:22.460 --> 39:27.940]  Alguns deles são, por exemplo, o Netflix e Spotify hoje recomendam conteúdos
+[39:28.660 --> 39:33.900]  com base nos dados que eles obtêm a partir do teu consumo, tá?
+[39:34.020 --> 39:37.500]  Grandes, né, redes sociais também já fazem isso, né?
+[39:38.600 --> 39:44.100]  A gente teve até recentemente ali um caso que ficou bastante claro aqui no Brasil,
+[39:44.100 --> 39:48.260]  aquele youtuber, influencer lá, o Felca,
+[39:48.940 --> 39:54.580]  e como isso é agudo para alguns casos sensíveis, como por exemplo,
+[39:54.580 --> 39:56.780]  a questão de adultização, né?
+[39:57.260 --> 40:02.260]  Ele mostrou que a gente cria um perfil zerado em uma rede social,
+[40:02.260 --> 40:07.900]  começa a buscar por alguns tipos de conteúdo que não são conteúdos ortodoxos
+[40:07.900 --> 40:11.340]  e o resultado daquilo é muito pesado.
+[40:11.940 --> 40:18.460]  O algoritmo te entrega um canhão de informações ali,
+[40:18.460 --> 40:26.380]  a respeito de algo que não deveria ter, não deveria ser tão simples assim,
+[40:26.380 --> 40:28.580]  não deveria ser tão direto ao ponto, tá?
+[40:28.580 --> 40:31.900]  Então isso é de fato uma inovação, né?
+[40:31.900 --> 40:33.700]  Dado o conteúdo personalizado.
+[40:33.700 --> 40:37.100]  Além disso, a gente tem a parte bancária, né?
+[40:37.100 --> 40:42.700]  Os bancos e setores governamentais usam machine learning para detectar fraude.
+[40:42.700 --> 40:46.780]  O processo é aquela mecânica de inovação com dados que a gente mostrou.
+[40:46.780 --> 40:47.980]  A indústria 4.0, né?
+[40:47.980 --> 40:52.980]  Que foi o exemplo clássico que eu dei ali inicialmente,
+[40:52.980 --> 40:55.780]  ela usa dados para reduzir falhas operacionais.
+[40:55.780 --> 41:00.300]  Áreas de saúde e diagnóstico orientado a dados também,
+[41:00.300 --> 41:09.900]  hoje está sendo realmente bastante interessante esse nível aí de melhorias que tem acontecido, tá?
+[41:09.900 --> 41:16.500]  Bom, tudo ok então quanto à inovação baseada em dados.
+[41:16.500 --> 41:17.260]  A gente viu...
+[41:17.980 --> 41:19.300]  O processo, né, pessoal?
+[41:19.300 --> 41:22.820]  Que tem cada vez mais se consolidado.
+[41:22.820 --> 41:30.700]  Agora a gente vai falar um pouquinho sobre como a gente pode, de fato,
+[41:30.700 --> 41:40.980]  no dia a dia, na nossa área, seja ela computação, seja ela outras áreas,
+[41:40.980 --> 41:45.980]  ter um pensamento, ter a identificação de estratégias e oportunidades, né?
+[41:45.980 --> 41:46.980]  Então o primeiro ponto é...
+[41:46.980 --> 41:47.980]  O primeiro ponto é...
+[41:47.980 --> 41:50.900]  É o mindset, é a forma de se pensar, né?
+[41:50.900 --> 41:56.980]  Então, basicamente, para inovar é fundamental que a gente foque em dor.
+[41:56.980 --> 42:04.260]  E felizmente a gente está numa era que a gente tem conseguido cada vez mais categorizar,
+[42:04.260 --> 42:06.820]  identificar dor e necessidade.
+[42:06.820 --> 42:13.700]  Então isso pode ser ou só para a área de vocês ou para áreas do cônjuge ou de um parente próximo,
+[42:13.700 --> 42:14.580]  de alguém.
+[42:14.580 --> 42:17.780]  A identificação de dores, ela é...
+[42:17.780 --> 42:22.820]  Ela é o gatilho para mapear o gap de mercado e inovação, né?
+[42:22.820 --> 42:25.940]  Então isso não começa na tecnologia.
+[42:25.940 --> 42:26.940]  Começa no problema.
+[42:26.940 --> 42:33.740]  O problema é o que traz a nossa...
+[42:33.740 --> 42:38.020]  O gatilho para se pensar em inovação, tá?
+[42:38.020 --> 42:41.020]  Basicamente é isso que a gente precisa, né?
+[42:41.020 --> 42:44.700]  Entender dor, necessidade, identificar gap e mercado.
+[42:44.700 --> 42:45.700]  Feito isso, a gente pode ir para uma linha de ter benchmarking.
+[42:45.700 --> 42:46.700]  Então, a gente vai ter uma linha de ter benchmarking, né?
+[42:46.700 --> 42:47.700]  Então, a gente vai ter uma linha de ter benchmarking, né?
+[42:47.700 --> 42:49.580]  E identificar tendências, né?
+[42:49.580 --> 42:56.540]  De repente, tudo que a gente tem como dor, já tem alguém fazendo algo similar em algum
+[42:56.540 --> 43:00.640]  lugar do mundo ou alguém fez algo incipiente.
+[43:00.640 --> 43:05.220]  É importante identificar se deu certo, se deu errado, por que aquilo não virou negócio,
+[43:05.220 --> 43:08.420]  por que aquilo não virou...
+[43:08.420 --> 43:09.940]  Não foi adiante, tá?
+[43:09.940 --> 43:10.940]  Isso é fundamental.
+[43:10.940 --> 43:15.740]  Bom, e aí a gente tem alguns métodos.
+[43:15.740 --> 43:16.740]  Mas...
+[43:16.740 --> 43:17.700]  Ah, desculpa!
+[43:17.700 --> 43:26.620]  métodos e análises que são importantíssimos para ajudar a gente a identificar esses pontos, tá?
+[43:31.420 --> 43:33.680]  Quais são esses métodos, né?
+[43:35.780 --> 43:41.960]  A gente vai, na prática, né, colocar conteúdo sobre isso,
+[43:41.960 --> 43:48.640]  mas existem alguns métodos que nos guiam a melhorar as coisas.
+[43:48.760 --> 43:55.820]  Por exemplo, os métodos de análise, como o PESTEL, a análise competitiva de Porter,
+[43:56.260 --> 44:02.360]  relatórios setoriais, aí tem um texto complementar que está lá no Moodle que vai estar um pouco vinculado a isso.
+[44:02.780 --> 44:07.040]  São alguns instrumentos que a gente usa para compreender o ambiente externo,
+[44:08.040 --> 44:11.940]  identificar tendências, reconhecer mudanças que podem gerar oportunidades,
+[44:11.960 --> 44:12.960]  oportunidades de inovação.
+[44:13.740 --> 44:18.080]  Então, esses métodos, eles vão basicamente responder para nós,
+[44:18.160 --> 44:23.180]  para onde o mercado está indo, o que está mudando no comportamento da sociedade,
+[44:24.280 --> 44:31.660]  quais tecnologias vão estar emergindo, quais riscos, ameaças a gente pode impactar no nosso projeto,
+[44:32.400 --> 44:35.140]  o que os concorrentes estão fazendo, o que não estão,
+[44:35.140 --> 44:41.140]  ou seja, é uma forma de afiar o olhar antes de propor qualquer solução.
+[44:41.960 --> 44:52.460]  Então, o PESTEL, ele é uma linha, por exemplo, um framework que analisa a parte política e compliance também,
+[44:52.720 --> 44:59.880]  então, a parte regulamentar, política, de uma demanda, a parte economia,
+[45:00.240 --> 45:10.980]  então, PE, Political Economy, economia, então, como que o lugar onde você vai aplicar MVP daquilo está aceitando,
+[45:10.980 --> 45:11.920]  qual é o PIB?
+[45:11.960 --> 45:19.400]  Inflação, câmbio, tem questão de taxa em cima daquilo e tal.
+[45:20.140 --> 45:24.800]  A parte social, então, a parte demográfica, cultura, comportamento, padrão social,
+[45:24.980 --> 45:25.900]  então, PESTEL.
+[45:27.040 --> 45:31.440]  Tecnológico, a parte de inovação tecnológica, disponibilidade tecnológica,
+[45:32.180 --> 45:38.100]  environmental, que é tipo de ambiente, a parte de sustentabilidade, se a solução não oferece sustentabilidade,
+[45:38.100 --> 45:41.220]  e, por fim, o L é de legal.
+[45:41.960 --> 45:50.280]  LGPD, lei de dados, normas específicas, então, PESTEL é um framework onde a gente analisa se a inovação que a gente está propondo
+[45:50.280 --> 45:55.920]  se adequa a esses tópicos que a gente montou ali.
+[45:57.100 --> 46:00.780]  Então, por que isso importa na ciência de dados?
+[46:00.860 --> 46:03.900]  Quando a gente está lidando com dados, a gente está lidando com muita coisa sensível.
+[46:03.900 --> 46:09.160]  Por exemplo, o LGPD, ele afeta diretamente o que a gente pode fazer com dados.
+[46:09.280 --> 46:10.900]  De repente, a gente está achando...
+[46:11.960 --> 46:19.640]  que pode ter acesso a uma base ou alguma coisa, mas, de repente, isso fere completamente a LGPD,
+[46:20.100 --> 46:22.560]  e assim por diante.
+[46:24.680 --> 46:31.640]  Bom, então, esses métodos e análises já nos adiantam a viabilidade de inovação do que a gente está pensando.
+[46:32.040 --> 46:35.860]  Tem algumas coisas competitivas que podem ser consideradas também,
+[46:35.860 --> 46:40.220]  a de Porter, ele traz a parte de rivalidade de concorrência,
+[46:41.080 --> 46:41.860]  poder de bargana,
+[46:41.960 --> 46:45.960]  barreira de entrada, ameaça a produto substituto.
+[46:45.960 --> 46:54.960]  Então, todos esses conceitos ele traz ali dentro do que a gente pode considerar como sendo inovação também.
+[46:54.960 --> 47:02.960]  Ok quanto à parte de métodos e análises, né?
+[47:02.960 --> 47:05.960]  E a parte de conexão com dados, né?
+[47:05.960 --> 47:10.960]  Então, quando a gente vai para a parte de conexão com dados, aí já a gente já está falando de algo um pouquinho mais humano, né?
+[47:10.960 --> 47:11.960]  Então, quando a gente vai para a parte de conexão com dados, aí já a gente já está falando de algo um pouquinho mais humano, né?
+[47:11.960 --> 47:12.960]  Então, quando a gente vai para a parte de conexão com dados, aí já a gente já está falando de algo um pouquinho mais humano, né?
+[47:12.960 --> 47:13.960]  Então, quando a gente vai para a parte de conexão com dados, aí já a gente já está falando de algo um pouquinho mais humano, né?
+[47:13.960 --> 47:15.960]  Desumano para vocês, né? Desumano para quem não é da área de ciência de dados.
+[47:15.960 --> 47:18.960]  Mas aí a gente chega naquele ciclo, né?
+[47:18.960 --> 47:24.960]  Ao detectar os padrões, identificar comportamentos, analisar métrica, a gente consegue, né?
+[47:24.960 --> 47:35.960]  Se o método de análise está ok para inovação, a gente consegue identificar, transformar oportunidades em inovação concreta. Ok?
+[47:36.960 --> 47:40.960]  Joia, pessoal. Avançamos então aqui no nível de identificação de oportunidades.
+[47:40.960 --> 47:47.960]  E vamos para a parte de brainstorming e métodos de ideação. Ok?
+[47:47.960 --> 47:53.960]  Em termos de brainstorming e método de ordenação, tá?
+[47:53.960 --> 48:00.960]  A gente tem algumas técnicas já bastante consolidadas, né?
+[48:00.960 --> 48:05.960]  O brainstorming. O brainstorming, na prática, é a tempestade de ideias.
+[48:05.960 --> 48:09.960]  É uma forma da gente...
+[48:09.960 --> 48:10.960]  Da gente...
+[48:10.960 --> 48:14.960]  Realmente esgotar possibilidades de...
+[48:17.960 --> 48:19.960]  Possibilidades de...
+[48:21.960 --> 48:25.960]  De ver uma solução com diversas óticas, né?
+[48:26.960 --> 48:31.960]  Então, o brainstorming, ele é um método bem conhecido.
+[48:31.960 --> 48:33.960]  Ele forma como uma discussão verbal.
+[48:33.960 --> 48:36.960]  Não tão organizada, normalmente em grupo.
+[48:36.960 --> 48:39.960]  Que a gente fala como uma solução vai funcionar.
+[48:39.960 --> 48:46.960]  Que aquele grupo livremente pode levantar de problema, de pró, contra, benefício, foco, enfim.
+[48:46.960 --> 48:50.960]  O brainwriting já é um pouquinho mais organizado.
+[48:50.960 --> 48:54.960]  Porque é uma validação que se concentra na contribuição escrita, né?
+[48:54.960 --> 49:01.960]  Então, você pode envolver pessoas ou um mural com post-its ou um miro ali com post-its.
+[49:01.960 --> 49:04.960]  Onde todo mundo organiza ideias, né?
+[49:04.960 --> 49:07.960]  Colegas adicionam suas próprias sugestões de melhoria.
+[49:07.960 --> 49:13.960]  E aquilo garante a sua participação igualitária de todos numa possibilidade de solução.
+[49:14.960 --> 49:18.960]  O SCAMPER, aí a gente vai ver e falar dele também na BT Material.
+[49:18.960 --> 49:21.960]  É uma técnica mais estruturada.
+[49:21.960 --> 49:25.960]  Ela serve como um guia para a inovação de produtos.
+[49:25.960 --> 49:28.960]  Ou para a melhoria de um produto já existente.
+[49:28.960 --> 49:33.960]  Então, o SCAMPER ali, ele é o acrônimo de...
+[49:33.960 --> 49:36.960]  Substituir, combinar, adaptar.
+[49:36.960 --> 49:39.960]  Modificar, propor.
+[49:39.960 --> 49:42.960]  Eliminar e rearranjar.
+[49:42.960 --> 49:47.960]  Então, tem uma estrutura genérica que a gente coloca dentro de um framework.
+[49:47.960 --> 49:51.960]  Coloca a solução atual do que a gente tem, o estado da arte.
+[49:51.960 --> 49:58.960]  E verifica estruturalmente como a gente pode lidar com a melhoria daqui, tá?
+[49:58.960 --> 50:03.960]  Essas técnicas clássicas a gente também vai abordar na disciplina, tá?
+[50:03.960 --> 50:05.960]  É...
+[50:06.960 --> 50:08.960]  E enfim...
+[50:08.960 --> 50:11.960]  Esse daqui não é tão novo.
+[50:11.960 --> 50:15.960]  Mas tem algumas técnicas mais modernas aí.
+[50:15.960 --> 50:25.960]  Eu já vou trazer para vocês que realmente a gente vai ter algum conteúdo sobre o que o pessoal costuma, né?
+[50:25.960 --> 50:28.960]  Normalmente esse pessoal de coaching, de inovação adora fazer.
+[50:28.960 --> 50:32.960]  Eu sou um professor clássico, não vou ficar defendendo.
+[50:32.960 --> 50:34.960]  Mas o pessoal fala do design thinking.
+[50:34.960 --> 50:39.960]  Mas enfim, que é uma abordagem mais criativa para a solução de um problema complexo.
+[50:39.960 --> 50:45.960]  Centra no usuário final que vai beber da fonte da solução do problema.
+[50:45.960 --> 50:49.960]  Envolve empatia, colaboração, experimentação.
+[50:49.960 --> 50:53.960]  E normalmente é dividido em etapas como imersão, ideação, né?
+[50:53.960 --> 50:56.960]  Tem... O pessoal fala do double diamond.
+[50:56.960 --> 51:02.960]  Que é uma forma de você divergir, convergir, divergir, convergir e chegar numa solução.
+[51:02.960 --> 51:05.960]  E assim por diante, tá?
+[51:05.960 --> 51:10.960]  Design thinking então é uma estratégia também de...
+[51:10.960 --> 51:16.960]  Que eu recomendaria caso vocês forem pensar em inovação.
+[51:16.960 --> 51:18.960]  E design sprint também.
+[51:18.960 --> 51:23.960]  Design sprint é uma forma de você organizar as ideias em tarefas, né?
+[51:23.960 --> 51:25.960]  Então você consegue...
+[51:25.960 --> 51:30.960]  É uma metodologia ágil para fazer a ideação de alguma coisa.
+[51:30.960 --> 51:31.960]  Foi desenvolvida no Google Vents.
+[51:31.960 --> 51:32.960]  Foi desenvolvida no Google Vents.
+[51:32.960 --> 51:42.960]  Então tem já um selo de qualidade nascido no berço de uma organização que inova por natureza.
+[51:42.960 --> 51:43.960]  É um período curto.
+[51:43.960 --> 51:45.960]  Tem livros de apoio.
+[51:45.960 --> 51:46.960]  Tem algumas versões encurtadas.
+[51:46.960 --> 51:48.960]  Mas normalmente é um...
+[51:48.960 --> 51:54.960]  Pessoas importantes dentro de uma solução se reúnem por cinco dias.
+[51:54.960 --> 51:57.960]  Até parir a ideia daquela solução, né?
+[51:57.960 --> 52:00.960]  A ideia é sempre resolver um problema específico.
+[52:00.960 --> 52:01.960]  Testar a ideia de forma rápida.
+[52:01.960 --> 52:03.960]  Economizar tempo, dinheiro, enfim.
+[52:03.960 --> 52:08.960]  É realmente bastante interessante de forma como isso se estrutura.
+[52:08.960 --> 52:13.960]  Normalmente passa por ter prototipações e prévias do produto, tá?
+[52:13.960 --> 52:19.960]  Matriz esforço-impacto é uma matriz onde a gente organiza o que tem mais valor e o que tem menos impacto.
+[52:19.960 --> 52:22.960]  Para dar um direcionamento de priorização, tá?
+[52:22.960 --> 52:26.960]  Normalmente também é útil nessas técnicas mais modernas.
+[52:26.960 --> 52:28.960]  Então, é uma matriz que a gente organiza.
+[52:28.960 --> 52:29.960]  Então, é uma matriz que a gente organiza.
+[52:29.960 --> 52:31.960]  Então, é uma matriz que a gente organiza.
+[52:31.960 --> 52:32.960]  Então, é uma matriz que a gente organiza.
+[52:32.960 --> 52:40.960]  Bom, combinando com dados, a gente pode considerar que a ideação...
+[52:40.960 --> 52:44.960]  A ideação com dados tem um processo ainda mais eficiente.
+[52:44.960 --> 52:47.960]  Não é mais especulativo como aquelas técnicas mais modernas.
+[52:47.960 --> 52:54.960]  E a gente, em vez apenas de imaginar, a gente pode usar dados para ter insights e guiar escolhas,
+[52:54.960 --> 52:56.960]  para dar etapas.
+[52:56.960 --> 52:58.960]  E ali a gente tem algumas ferramentas, que podem ser utilizadas.
+[52:58.960 --> 53:00.860]  ferramentas que podem ser utilizadas, né,
+[53:00.940 --> 53:02.860]  mapa de calor, de oportunidades,
+[53:03.580 --> 53:05.180]  ideação guiada por insights,
+[53:05.860 --> 53:06.980]  e as ferramentas
+[53:06.980 --> 53:09.020]  tradicionais colaborativas,
+[53:09.180 --> 53:11.020]  né, Notion, etc, e GitHub
+[53:11.020 --> 53:12.400]  para repositório de dados,
+[53:13.120 --> 53:14.700]  esse vocês com certeza já estão
+[53:14.700 --> 53:16.020]  cansados de ver,
+[53:16.380 --> 53:19.120]  dentro da rotina de vocês
+[53:19.120 --> 53:21.240]  aí, técnica,
+[53:21.460 --> 53:21.580]  tá?
+[53:22.640 --> 53:25.000]  Bom, quanto a métodos
+[53:25.000 --> 53:26.860]  de ideação e brainstorming, a gente vai
+[53:26.860 --> 53:28.760]  ter mais conteúdo, claro, né,
+[53:28.760 --> 53:30.580]  que a gente acaba pincelando,
+[53:31.340 --> 53:32.800]  mas basicamente é isso,
+[53:33.020 --> 53:34.760]  né, mais uma provocação para vocês
+[53:34.760 --> 53:36.000]  em relação a
+[53:36.000 --> 53:38.740]  como lidar com isso dentro
+[53:38.740 --> 53:40.180]  do dia a dia de vocês, ok?
+[53:42.200 --> 53:42.680]  Cultura
+[53:42.680 --> 53:44.780]  e liderança para inovação.
+[53:44.980 --> 53:46.620]  Sobre métodos, tudo ok,
+[53:46.740 --> 53:48.600]  pessoal? Tudo bem? Podemos avançar?
+[53:48.780 --> 53:50.820]  Tem alguma sugestão? Alguém viu algum ponto
+[53:50.820 --> 53:52.740]  que queira destacar?
+[53:53.020 --> 53:53.800]  Ou tá tranquilo?
+[53:56.520 --> 53:57.880]  Então vamos seguir.
+[53:58.540 --> 53:58.740]  Cultura,
+[53:58.760 --> 54:00.500]  cultura de liderança para inovação.
+[54:01.680 --> 54:02.640]  Mais uma vez,
+[54:02.780 --> 54:03.840]  pessoal, retomo, né,
+[54:03.960 --> 54:06.680]  a inovação,
+[54:06.900 --> 54:08.540]  ela não é
+[54:08.540 --> 54:10.500]  algo simples, né, a gente às vezes
+[54:10.500 --> 54:12.780]  tem mapeado na cabeça uma solução,
+[54:13.040 --> 54:14.320]  alguma coisa que a gente pode
+[54:14.320 --> 54:17.000]  fazer para melhorar um setor,
+[54:17.100 --> 54:18.100]  uma área como toda,
+[54:18.960 --> 54:19.840]  mas
+[54:19.840 --> 54:22.520]  precisa ali de uma série
+[54:22.520 --> 54:24.600]  de fatores, né, uma série de
+[54:24.600 --> 54:25.780]  elos se ligarem
+[54:25.780 --> 54:28.660]  para que a inovação seja consolidada.
+[54:28.760 --> 54:30.540]  Um elo importantíssimo
+[54:30.540 --> 54:33.120]  é quem tá à frente
+[54:33.120 --> 54:34.580]  da ideia,
+[54:34.900 --> 54:36.440]  ter a cultura
+[54:36.440 --> 54:39.280]  e o aspecto de liderança
+[54:39.280 --> 54:41.060]  para isso, né, a gente já
+[54:41.060 --> 54:42.800]  viu o ego matar
+[54:42.800 --> 54:45.020]  projetos maravilhosos, né,
+[54:45.720 --> 54:46.180]  e
+[54:46.180 --> 54:49.000]  quando a gente fala de liderança, é um negócio
+[54:49.000 --> 54:51.060]  construído, mais uma vez, não é algo
+[54:51.060 --> 54:53.300]  nato, que nasce,
+[54:53.380 --> 54:54.040]  alguns sim,
+[54:55.560 --> 54:56.340]  alguns sim,
+[54:57.600 --> 54:58.540]  nascem com a liderança,
+[54:58.540 --> 55:00.860]  já, talvez como cultura,
+[55:01.060 --> 55:02.820]  né, de repente, porque teve muito
+[55:02.820 --> 55:04.300]  contato com o familiar,
+[55:05.400 --> 55:06.840]  ou com alguém
+[55:06.840 --> 55:09.060]  próximo que faz
+[55:09.060 --> 55:10.320]  atos de liderança,
+[55:11.180 --> 55:12.120]  mas caso você,
+[55:12.740 --> 55:14.920]  por algum infortúnio da vida, você não tenha
+[55:14.920 --> 55:16.780]  tido nenhum exemplo muito bom
+[55:16.780 --> 55:19.100]  de liderança dentro da tua,
+[55:19.620 --> 55:21.140]  do teu processo formativo,
+[55:21.980 --> 55:22.980]  muito provavelmente você
+[55:22.980 --> 55:24.880]  não, você não tenha
+[55:24.880 --> 55:26.480]  como ter isso como
+[55:26.480 --> 55:27.660]  referência.
+[55:28.540 --> 55:30.240]  É no momento que a gente tem que
+[55:30.240 --> 55:32.320]  identificar esse problema, essa
+[55:32.320 --> 55:34.080]  limitação e criar
+[55:34.080 --> 55:36.460]  esse aspecto de líder
+[55:36.460 --> 55:38.080]  em nós mesmos, né,
+[55:38.320 --> 55:39.980]  então essa cultura e
+[55:39.980 --> 55:41.920]  essas características
+[55:41.920 --> 55:43.240]  de
+[55:43.240 --> 55:46.180]  liderança são bastante importantes,
+[55:46.280 --> 55:46.620]  por quê?
+[55:47.800 --> 55:50.120]  Dentro da inovação, normalmente a gente
+[55:50.120 --> 55:52.660]  vai errar, a gente vai experimentar
+[55:52.660 --> 55:53.900]  errar, aprender,
+[55:54.320 --> 55:56.100]  aí a gente vai experimentar de novo, errar
+[55:56.100 --> 55:57.300]  de novo e aprender,
+[55:57.300 --> 55:57.660]  e
+[55:57.660 --> 55:58.500]  e
+
+Transcrição concluída!
+
+Salvando transcrição em: data\transcricao_aula_gestao-da-inovacao-em-ciencia-de-dados_20251122.txt
+Transcrição salva com sucesso!
+
+Estatísticas da transcrição:
+   - Palavras: 7,591
+   - Caracteres: 43,639
+   - Tamanho do arquivo: 45.09 KB
+
+Limpando arquivos temporários...
+Arquivo de áudio temporário removido.

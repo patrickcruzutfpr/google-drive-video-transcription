@@ -36,6 +36,7 @@ wheels/
 # Output files
 *.txt
 !requirements.txt
+!results/*.txt
 
 # Large model files
 *.gguf

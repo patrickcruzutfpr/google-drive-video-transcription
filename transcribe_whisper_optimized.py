@@ -20,7 +20,7 @@ from pathlib import Path
 
 # Configurações
 INPUT_VIDEO = r"data\aula_gestao-da-inovacao-em-ciencia-de-dados_20251122_recording.mp4"
-OUTPUT_FILE = r"data\transcricao_aula_gestao-da-inovacao-em-ciencia-de-dados_20251122.txt"
+OUTPUT_FILE = r"results\transcricao_aula_gestao-da-inovacao-em-ciencia-de-dados_20251122.txt"
 TEMP_AUDIO = r"data\temp_audio_extraction.wav"
 MODEL_NAME = "large-v3"
 
